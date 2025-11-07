@@ -1,0 +1,15 @@
+C:\Users\Romashka\Desktop\Julia\Julia\bin\Debug\Julia.exe.config
+C:\Users\Romashka\Desktop\Julia\Julia\bin\Debug\Julia.exe
+C:\Users\Romashka\Desktop\Julia\Julia\bin\Debug\Julia.pdb
+C:\Users\Romashka\Desktop\Julia\Julia\obj\Debug\Julia.csproj.AssemblyReference.cache
+C:\Users\Romashka\Desktop\Julia\Julia\obj\Debug\Julia.Form1.resources
+C:\Users\Romashka\Desktop\Julia\Julia\obj\Debug\Julia.Properties.Resources.resources
+C:\Users\Romashka\Desktop\Julia\Julia\obj\Debug\Julia.csproj.GenerateResource.cache
+C:\Users\Romashka\Desktop\Julia\Julia\obj\Debug\Julia.csproj.CoreCompileInputs.cache
+C:\Users\Romashka\Desktop\Julia\Julia\obj\Debug\Julia.exe
+C:\Users\Romashka\Desktop\Julia\Julia\obj\Debug\Julia.pdb
+C:\Users\Romashka\Desktop\Julia\Julia\obj\Debug\Julia.exe.config
+C:\Users\Romashka\Desktop\Julia\Julia\obj\Debug\Julia.TOE1Control.resources
+C:\Users\Romashka\Desktop\Julia\Julia\obj\Debug\Julia.TOE2Control.resources
+C:\Users\Romashka\Desktop\Julia\Julia\obj\Debug\Julia.TOE3Control.resources
+C:\Users\Romashka\Desktop\Julia\Julia\bin\Debug\flowers_2298475.ico

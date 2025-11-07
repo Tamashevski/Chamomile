@@ -1,0 +1,15 @@
+C:\Users\Romashka\Desktop\Julia\Julia\bin\Debug\flowers_2298475.ico
+C:\Users\Romashka\Desktop\Julia\Julia\bin\Debug\Chamomile.exe.config
+C:\Users\Romashka\Desktop\Julia\Julia\bin\Debug\Chamomile.exe
+C:\Users\Romashka\Desktop\Julia\Julia\bin\Debug\Chamomile.pdb
+C:\Users\Romashka\Desktop\Julia\Julia\obj\Debug\Chamomile.csproj.AssemblyReference.cache
+C:\Users\Romashka\Desktop\Julia\Julia\obj\Debug\Chamomile.Properties.Resources.resources
+C:\Users\Romashka\Desktop\Julia\Julia\obj\Debug\Chamomile.csproj.GenerateResource.cache
+C:\Users\Romashka\Desktop\Julia\Julia\obj\Debug\Chamomile.csproj.CoreCompileInputs.cache
+C:\Users\Romashka\Desktop\Julia\Julia\obj\Debug\Chamomile.exe
+C:\Users\Romashka\Desktop\Julia\Julia\obj\Debug\Chamomile.pdb
+C:\Users\Romashka\Desktop\Julia\Julia\obj\Debug\Chamomile.exe.config
+C:\Users\Romashka\Desktop\Julia\Julia\obj\Debug\Chamomile.Form1.resources
+C:\Users\Romashka\Desktop\Julia\Julia\obj\Debug\Chamomile.TOE2Control.resources
+C:\Users\Romashka\Desktop\Julia\Julia\obj\Debug\Chamomile.TOE1Control.resources
+C:\Users\Romashka\Desktop\Julia\Julia\obj\Debug\Chamomile.TOE3Control.resources
