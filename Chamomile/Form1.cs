@@ -40,5 +40,21 @@ namespace Chamomile
             toeControl.Dock = DockStyle.Fill;
             contentPanel.Controls.Add(toeControl);
         }
+
+        private void диагностикаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            contentPanel.Controls.Clear();
+            var DiagnosticsControl = new DiagnosticsControl();
+            DiagnosticsControl.Dock = DockStyle.Fill;
+            contentPanel.Controls.Add(DiagnosticsControl);
+        }
+
+        private void экономикаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            contentPanel.Controls.Clear();
+            var EconomyControl = new EconomyControl();
+            EconomyControl.Dock = DockStyle.Fill;
+            contentPanel.Controls.Add(EconomyControl);
+        }
     }
 }

@@ -37,14 +37,16 @@
             this.диагностикаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.экономикаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contentPanel = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
+            this.contentPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.тОЭToolStripMenuItem,
@@ -53,7 +55,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(22, 7, 0, 7);
-            this.menuStrip1.Size = new System.Drawing.Size(1034, 48);
+            this.menuStrip1.Size = new System.Drawing.Size(967, 33);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -64,56 +66,69 @@
             this.раздел2ToolStripMenuItem,
             this.раздел3ToolStripMenuItem});
             this.тОЭToolStripMenuItem.Name = "тОЭToolStripMenuItem";
-            this.тОЭToolStripMenuItem.Size = new System.Drawing.Size(73, 34);
+            this.тОЭToolStripMenuItem.Size = new System.Drawing.Size(40, 19);
             this.тОЭToolStripMenuItem.Text = "ТОЭ";
             // 
             // раздел1ToolStripMenuItem
             // 
             this.раздел1ToolStripMenuItem.Name = "раздел1ToolStripMenuItem";
-            this.раздел1ToolStripMenuItem.Size = new System.Drawing.Size(227, 44);
+            this.раздел1ToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.раздел1ToolStripMenuItem.Text = "Раздел 1";
             this.раздел1ToolStripMenuItem.Click += new System.EventHandler(this.раздел1ToolStripMenuItem_Click);
             // 
             // раздел2ToolStripMenuItem
             // 
             this.раздел2ToolStripMenuItem.Name = "раздел2ToolStripMenuItem";
-            this.раздел2ToolStripMenuItem.Size = new System.Drawing.Size(227, 44);
+            this.раздел2ToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.раздел2ToolStripMenuItem.Text = "Раздел 2";
             this.раздел2ToolStripMenuItem.Click += new System.EventHandler(this.раздел2ToolStripMenuItem_Click);
             // 
             // раздел3ToolStripMenuItem
             // 
             this.раздел3ToolStripMenuItem.Name = "раздел3ToolStripMenuItem";
-            this.раздел3ToolStripMenuItem.Size = new System.Drawing.Size(227, 44);
+            this.раздел3ToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.раздел3ToolStripMenuItem.Text = "Раздел 3";
             this.раздел3ToolStripMenuItem.Click += new System.EventHandler(this.раздел3ToolStripMenuItem_Click);
             // 
             // диагностикаToolStripMenuItem
             // 
             this.диагностикаToolStripMenuItem.Name = "диагностикаToolStripMenuItem";
-            this.диагностикаToolStripMenuItem.Size = new System.Drawing.Size(155, 34);
+            this.диагностикаToolStripMenuItem.Size = new System.Drawing.Size(88, 19);
             this.диагностикаToolStripMenuItem.Text = "Диагностика";
+            this.диагностикаToolStripMenuItem.Click += new System.EventHandler(this.диагностикаToolStripMenuItem_Click);
             // 
             // экономикаToolStripMenuItem
             // 
             this.экономикаToolStripMenuItem.Name = "экономикаToolStripMenuItem";
-            this.экономикаToolStripMenuItem.Size = new System.Drawing.Size(140, 34);
+            this.экономикаToolStripMenuItem.Size = new System.Drawing.Size(80, 19);
             this.экономикаToolStripMenuItem.Text = "Экономика";
+            this.экономикаToolStripMenuItem.Click += new System.EventHandler(this.экономикаToolStripMenuItem_Click);
             // 
             // contentPanel
             // 
+            this.contentPanel.Controls.Add(this.pictureBox1);
             this.contentPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.contentPanel.Location = new System.Drawing.Point(15, 44);
+            this.contentPanel.Location = new System.Drawing.Point(15, 36);
             this.contentPanel.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.contentPanel.Name = "contentPanel";
-            this.contentPanel.Size = new System.Drawing.Size(1003, 675);
+            this.contentPanel.Size = new System.Drawing.Size(937, 517);
             this.contentPanel.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(225, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(512, 533);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(22F, 42F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1034, 735);
+            this.BackColor = System.Drawing.Color.DarkGray;
+            this.ClientSize = new System.Drawing.Size(967, 555);
             this.Controls.Add(this.contentPanel);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -124,8 +139,11 @@
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "tg@Tamashevski";
+            this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.contentPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -141,6 +159,7 @@
         private System.Windows.Forms.ToolStripMenuItem раздел1ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem раздел2ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem раздел3ToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
