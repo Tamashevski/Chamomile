@@ -23,6 +23,9 @@ namespace Chamomile
             var toeControl = new TOE1Control();
             toeControl.Dock = DockStyle.Fill;
             contentPanel.Controls.Add(toeControl);
+            
+
+
         }
 
         private void раздел2ToolStripMenuItem_Click(object sender, EventArgs e)

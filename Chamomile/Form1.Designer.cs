@@ -55,7 +55,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(22, 7, 0, 7);
-            this.menuStrip1.Size = new System.Drawing.Size(967, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(1032, 31);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -66,7 +66,7 @@
             this.раздел2ToolStripMenuItem,
             this.раздел3ToolStripMenuItem});
             this.тОЭToolStripMenuItem.Name = "тОЭToolStripMenuItem";
-            this.тОЭToolStripMenuItem.Size = new System.Drawing.Size(40, 19);
+            this.тОЭToolStripMenuItem.Size = new System.Drawing.Size(40, 17);
             this.тОЭToolStripMenuItem.Text = "ТОЭ";
             // 
             // раздел1ToolStripMenuItem
@@ -93,14 +93,14 @@
             // диагностикаToolStripMenuItem
             // 
             this.диагностикаToolStripMenuItem.Name = "диагностикаToolStripMenuItem";
-            this.диагностикаToolStripMenuItem.Size = new System.Drawing.Size(88, 19);
+            this.диагностикаToolStripMenuItem.Size = new System.Drawing.Size(88, 17);
             this.диагностикаToolStripMenuItem.Text = "Диагностика";
             this.диагностикаToolStripMenuItem.Click += new System.EventHandler(this.диагностикаToolStripMenuItem_Click);
             // 
             // экономикаToolStripMenuItem
             // 
             this.экономикаToolStripMenuItem.Name = "экономикаToolStripMenuItem";
-            this.экономикаToolStripMenuItem.Size = new System.Drawing.Size(80, 19);
+            this.экономикаToolStripMenuItem.Size = new System.Drawing.Size(80, 17);
             this.экономикаToolStripMenuItem.Text = "Экономика";
             this.экономикаToolStripMenuItem.Click += new System.EventHandler(this.экономикаToolStripMenuItem_Click);
             // 
@@ -111,15 +111,15 @@
             this.contentPanel.Location = new System.Drawing.Point(15, 36);
             this.contentPanel.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.contentPanel.Name = "contentPanel";
-            this.contentPanel.Size = new System.Drawing.Size(937, 517);
+            this.contentPanel.Size = new System.Drawing.Size(1002, 551);
             this.contentPanel.TabIndex = 1;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(225, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(232, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(512, 533);
+            this.pictureBox1.Size = new System.Drawing.Size(516, 545);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -128,7 +128,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
-            this.ClientSize = new System.Drawing.Size(967, 555);
+            this.ClientSize = new System.Drawing.Size(1032, 580);
             this.Controls.Add(this.contentPanel);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -138,7 +138,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
-            this.Text = "tg@Tamashevski";
+            this.Text = "Chamomile";
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
