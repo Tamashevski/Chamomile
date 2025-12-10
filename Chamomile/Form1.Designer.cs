@@ -55,7 +55,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(22, 7, 0, 7);
-            this.menuStrip1.Size = new System.Drawing.Size(1032, 31);
+            this.menuStrip1.Size = new System.Drawing.Size(971, 31);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -111,7 +111,7 @@
             this.contentPanel.Location = new System.Drawing.Point(15, 36);
             this.contentPanel.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.contentPanel.Name = "contentPanel";
-            this.contentPanel.Size = new System.Drawing.Size(1002, 551);
+            this.contentPanel.Size = new System.Drawing.Size(942, 512);
             this.contentPanel.TabIndex = 1;
             // 
             // pictureBox1
@@ -128,7 +128,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
-            this.ClientSize = new System.Drawing.Size(1032, 580);
+            this.ClientSize = new System.Drawing.Size(971, 554);
             this.Controls.Add(this.contentPanel);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));

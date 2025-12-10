@@ -3,23 +3,31 @@
   "WorkspaceRootPath": "L:\\Chamomile\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BC15B840-1034-4367-A3BE-9F82F3CBD950}|Chamomile\\Chamomile.csproj|l:\\chamomile\\chamomile\\toe1control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BC15B840-1034-4367-A3BE-9F82F3CBD950}|Chamomile\\Chamomile.csproj|solutionrelative:chamomile\\toe1control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{BC15B840-1034-4367-A3BE-9F82F3CBD950}|Chamomile\\Chamomile.csproj|l:\\chamomile\\chamomile\\toe1calculation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC15B840-1034-4367-A3BE-9F82F3CBD950}|Chamomile\\Chamomile.csproj|solutionrelative:chamomile\\toe1calculation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BC15B840-1034-4367-A3BE-9F82F3CBD950}|Chamomile\\Chamomile.csproj|L:\\Chamomile\\chamomile\\toe1control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BC15B840-1034-4367-A3BE-9F82F3CBD950}|Chamomile\\Chamomile.csproj|solutionrelative:chamomile\\toe1control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BC15B840-1034-4367-A3BE-9F82F3CBD950}|Chamomile\\Chamomile.csproj|L:\\Chamomile\\chamomile\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BC15B840-1034-4367-A3BE-9F82F3CBD950}|Chamomile\\Chamomile.csproj|solutionrelative:chamomile\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{BC15B840-1034-4367-A3BE-9F82F3CBD950}|Chamomile\\Chamomile.csproj|L:\\Chamomile\\chamomile\\toe1control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BC15B840-1034-4367-A3BE-9F82F3CBD950}|Chamomile\\Chamomile.csproj|solutionrelative:chamomile\\toe1control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC15B840-1034-4367-A3BE-9F82F3CBD950}|Chamomile\\Chamomile.csproj|L:\\Chamomile\\chamomile\\diagnosticscontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC15B840-1034-4367-A3BE-9F82F3CBD950}|Chamomile\\Chamomile.csproj|solutionrelative:chamomile\\diagnosticscontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BC15B840-1034-4367-A3BE-9F82F3CBD950}|Chamomile\\Chamomile.csproj|L:\\Chamomile\\chamomile\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BC15B840-1034-4367-A3BE-9F82F3CBD950}|Chamomile\\Chamomile.csproj|solutionrelative:chamomile\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BC15B840-1034-4367-A3BE-9F82F3CBD950}|Chamomile\\Chamomile.csproj|l:\\chamomile\\chamomile\\diagnosticscontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{BC15B840-1034-4367-A3BE-9F82F3CBD950}|Chamomile\\Chamomile.csproj|L:\\Chamomile\\chamomile\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BC15B840-1034-4367-A3BE-9F82F3CBD950}|Chamomile\\Chamomile.csproj|solutionrelative:chamomile\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC15B840-1034-4367-A3BE-9F82F3CBD950}|Chamomile\\Chamomile.csproj|L:\\Chamomile\\chamomile\\diagnosticscontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{BC15B840-1034-4367-A3BE-9F82F3CBD950}|Chamomile\\Chamomile.csproj|solutionrelative:chamomile\\diagnosticscontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -34,7 +42,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "L:\\Chamomile\\Chamomile\\Form1.cs",
               "RelativeDocumentMoniker": "Chamomile\\Form1.cs",
@@ -42,12 +50,11 @@
               "RelativeToolTip": "Chamomile\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-07T16:36:36.072Z",
-              "IsPinned": true,
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Form1.cs",
               "DocumentMoniker": "L:\\Chamomile\\Chamomile\\Form1.cs",
               "RelativeDocumentMoniker": "Chamomile\\Form1.cs",
@@ -56,19 +63,19 @@
               "ViewState": "AgIAAA0AAAAAAAAAAAAmwBYAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-07T16:38:53.752Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DiagnosticsControl.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "L:\\Chamomile\\Chamomile\\DiagnosticsControl.cs",
-              "RelativeDocumentMoniker": "Chamomile\\DiagnosticsControl.cs",
-              "ToolTip": "L:\\Chamomile\\Chamomile\\DiagnosticsControl.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "Chamomile\\DiagnosticsControl.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentIndex": 2,
+              "Title": "TOE1Control.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "L:\\Chamomile\\Chamomile\\TOE1Control.cs",
+              "RelativeDocumentMoniker": "Chamomile\\TOE1Control.cs",
+              "ToolTip": "L:\\Chamomile\\Chamomile\\TOE1Control.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]*",
+              "RelativeToolTip": "Chamomile\\TOE1Control.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T17:56:18.583Z",
+              "WhenOpened": "2025-11-09T18:54:14.431Z",
+              "IsPinned": true,
               "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
             },
             {
@@ -77,24 +84,49 @@
               "Title": "TOE1Control.cs",
               "DocumentMoniker": "L:\\Chamomile\\Chamomile\\TOE1Control.cs",
               "RelativeDocumentMoniker": "Chamomile\\TOE1Control.cs",
-              "ToolTip": "L:\\Chamomile\\Chamomile\\TOE1Control.cs",
-              "RelativeToolTip": "Chamomile\\TOE1Control.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAIAwwC8AAAAAAAAAAAAAAA==",
+              "ToolTip": "L:\\Chamomile\\Chamomile\\TOE1Control.cs*",
+              "RelativeToolTip": "Chamomile\\TOE1Control.cs*",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-09T19:15:58.854Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "TOE1Control.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "L:\\Chamomile\\Chamomile\\TOE1Control.cs",
-              "RelativeDocumentMoniker": "Chamomile\\TOE1Control.cs",
-              "ToolTip": "L:\\Chamomile\\Chamomile\\TOE1Control.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "Chamomile\\TOE1Control.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Title": "TOE1Calculation.cs",
+              "DocumentMoniker": "L:\\Chamomile\\Chamomile\\TOE1Calculation.cs",
+              "RelativeDocumentMoniker": "Chamomile\\TOE1Calculation.cs",
+              "ToolTip": "L:\\Chamomile\\Chamomile\\TOE1Calculation.cs*",
+              "RelativeToolTip": "Chamomile\\TOE1Calculation.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-09T18:54:14.431Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+              "WhenOpened": "2025-11-26T10:07:43.136Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DiagnosticsControl.cs",
+              "DocumentMoniker": "L:\\Chamomile\\Chamomile\\DiagnosticsControl.cs",
+              "RelativeDocumentMoniker": "Chamomile\\DiagnosticsControl.cs",
+              "ToolTip": "L:\\Chamomile\\Chamomile\\DiagnosticsControl.cs",
+              "RelativeToolTip": "Chamomile\\DiagnosticsControl.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAADgvyQAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T08:58:01.221Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DiagnosticsControl.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "L:\\Chamomile\\Chamomile\\DiagnosticsControl.cs",
+              "RelativeDocumentMoniker": "Chamomile\\DiagnosticsControl.cs",
+              "ToolTip": "L:\\Chamomile\\Chamomile\\DiagnosticsControl.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "Chamomile\\DiagnosticsControl.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T17:56:18.583Z"
             }
           ]
         }
