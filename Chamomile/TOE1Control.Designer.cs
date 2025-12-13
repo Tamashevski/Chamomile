@@ -604,7 +604,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(104, 31);
             this.textBox2.TabIndex = 218;
-            this.textBox2.Text = "Введите";
+            this.textBox2.Text = "9";
             this.textBox2.Click += new System.EventHandler(this.textBox2_Click);
             // 
             // label3
@@ -625,7 +625,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(104, 31);
             this.textBox3.TabIndex = 220;
-            this.textBox3.Text = "Введите";
+            this.textBox3.Text = "18";
             this.textBox3.Click += new System.EventHandler(this.textBox3_Click);
             // 
             // label4
@@ -646,7 +646,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(104, 31);
             this.textBox4.TabIndex = 222;
-            this.textBox4.Text = "Введите";
+            this.textBox4.Text = "18";
             this.textBox4.Click += new System.EventHandler(this.textBox4_Click);
             // 
             // label5
@@ -667,7 +667,7 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(104, 31);
             this.textBox5.TabIndex = 224;
-            this.textBox5.Text = "Введите";
+            this.textBox5.Text = "52,5";
             this.textBox5.Click += new System.EventHandler(this.textBox5_Click);
             // 
             // label6
@@ -688,7 +688,7 @@
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(104, 31);
             this.textBox6.TabIndex = 228;
-            this.textBox6.Text = "Введите";
+            this.textBox6.Text = "9";
             this.textBox6.Click += new System.EventHandler(this.textBox6_Click);
             // 
             // label7
@@ -709,7 +709,7 @@
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(104, 31);
             this.textBox7.TabIndex = 226;
-            this.textBox7.Text = "Введите";
+            this.textBox7.Text = "33";
             this.textBox7.Click += new System.EventHandler(this.textBox7_Click);
             // 
             // label9
@@ -730,7 +730,7 @@
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(104, 31);
             this.textBox8.TabIndex = 232;
-            this.textBox8.Text = "Введите";
+            this.textBox8.Text = "22,5";
             this.textBox8.Click += new System.EventHandler(this.textBox8_Click);
             // 
             // label10
@@ -751,7 +751,7 @@
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(104, 31);
             this.textBox9.TabIndex = 230;
-            this.textBox9.Text = "Введите";
+            this.textBox9.Text = "15";
             this.textBox9.Click += new System.EventHandler(this.textBox9_Click);
             // 
             // label11
@@ -882,7 +882,7 @@
             // 
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label19.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label19.Location = new System.Drawing.Point(190, 94);
+            this.label19.Location = new System.Drawing.Point(188, 94);
             this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(34, 54);
@@ -895,7 +895,7 @@
             // 
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label16.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label16.Location = new System.Drawing.Point(310, 94);
+            this.label16.Location = new System.Drawing.Point(308, 94);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(34, 54);
@@ -937,7 +937,7 @@
             // 
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label20.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label20.Location = new System.Drawing.Point(422, 94);
+            this.label20.Location = new System.Drawing.Point(420, 94);
             this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(34, 54);
@@ -979,7 +979,7 @@
             // 
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label22.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label22.Location = new System.Drawing.Point(422, 167);
+            this.label22.Location = new System.Drawing.Point(420, 167);
             this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(34, 54);
@@ -1021,7 +1021,7 @@
             // 
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label24.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label24.Location = new System.Drawing.Point(310, 167);
+            this.label24.Location = new System.Drawing.Point(308, 167);
             this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(34, 54);
@@ -1063,7 +1063,7 @@
             // 
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label26.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label26.Location = new System.Drawing.Point(190, 167);
+            this.label26.Location = new System.Drawing.Point(188, 167);
             this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(34, 54);
@@ -1116,7 +1116,7 @@
             // 
             this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label29.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label29.Location = new System.Drawing.Point(422, 252);
+            this.label29.Location = new System.Drawing.Point(420, 252);
             this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(34, 54);
@@ -1158,7 +1158,7 @@
             // 
             this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label31.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label31.Location = new System.Drawing.Point(310, 252);
+            this.label31.Location = new System.Drawing.Point(308, 252);
             this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(34, 54);
@@ -1200,7 +1200,7 @@
             // 
             this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label33.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label33.Location = new System.Drawing.Point(190, 252);
+            this.label33.Location = new System.Drawing.Point(188, 252);
             this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(34, 54);
@@ -1253,7 +1253,7 @@
             // 
             this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label40.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label40.Location = new System.Drawing.Point(190, 331);
+            this.label40.Location = new System.Drawing.Point(188, 331);
             this.label40.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(34, 54);
@@ -1407,7 +1407,7 @@
             // 
             this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label37.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label37.Location = new System.Drawing.Point(400, 331);
+            this.label37.Location = new System.Drawing.Point(398, 331);
             this.label37.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(34, 54);
@@ -1461,7 +1461,7 @@
             // 
             this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label44.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label44.Location = new System.Drawing.Point(608, 331);
+            this.label44.Location = new System.Drawing.Point(606, 331);
             this.label44.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(34, 54);
@@ -1505,12 +1505,7 @@
             this.comboBox57.ForeColor = System.Drawing.SystemColors.WindowText;
             this.comboBox57.FormattingEnabled = true;
             this.comboBox57.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6"});
+            "3"});
             this.comboBox57.Location = new System.Drawing.Point(376, 627);
             this.comboBox57.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox57.Name = "comboBox57";
@@ -1533,7 +1528,7 @@
             // 
             this.label117.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label117.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label117.Location = new System.Drawing.Point(188, 588);
+            this.label117.Location = new System.Drawing.Point(186, 588);
             this.label117.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label117.Name = "label117";
             this.label117.Size = new System.Drawing.Size(34, 54);
@@ -1548,9 +1543,7 @@
             this.comboBox60.ForeColor = System.Drawing.SystemColors.WindowText;
             this.comboBox60.FormattingEnabled = true;
             this.comboBox60.Items.AddRange(new object[] {
-            "I",
-            "II",
-            "III"});
+            "I"});
             this.comboBox60.Location = new System.Drawing.Point(240, 627);
             this.comboBox60.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox60.Name = "comboBox60";
@@ -1574,12 +1567,7 @@
             this.comboBox37.ForeColor = System.Drawing.SystemColors.WindowText;
             this.comboBox37.FormattingEnabled = true;
             this.comboBox37.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6"});
+            "5"});
             this.comboBox37.Location = new System.Drawing.Point(532, 627);
             this.comboBox37.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox37.Name = "comboBox37";
@@ -1603,11 +1591,6 @@
             this.comboBox38.ForeColor = System.Drawing.SystemColors.WindowText;
             this.comboBox38.FormattingEnabled = true;
             this.comboBox38.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
             "6"});
             this.comboBox38.Location = new System.Drawing.Point(688, 627);
             this.comboBox38.Margin = new System.Windows.Forms.Padding(4);
@@ -1653,7 +1636,7 @@
             // 
             this.label85.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label85.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label85.Location = new System.Drawing.Point(796, 588);
+            this.label85.Location = new System.Drawing.Point(794, 588);
             this.label85.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label85.Name = "label85";
             this.label85.Size = new System.Drawing.Size(34, 54);
@@ -1667,8 +1650,6 @@
             this.comboBox42.ForeColor = System.Drawing.SystemColors.WindowText;
             this.comboBox42.FormattingEnabled = true;
             this.comboBox42.Items.AddRange(new object[] {
-            "I",
-            "II",
             "III"});
             this.comboBox42.Location = new System.Drawing.Point(844, 627);
             this.comboBox42.Margin = new System.Windows.Forms.Padding(4);
@@ -1692,7 +1673,7 @@
             // 
             this.label87.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label87.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label87.Location = new System.Drawing.Point(1392, 588);
+            this.label87.Location = new System.Drawing.Point(1390, 588);
             this.label87.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label87.Name = "label87";
             this.label87.Size = new System.Drawing.Size(34, 54);
@@ -1731,7 +1712,7 @@
             // 
             this.label89.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label89.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label89.Location = new System.Drawing.Point(1272, 588);
+            this.label89.Location = new System.Drawing.Point(1270, 588);
             this.label89.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label89.Name = "label89";
             this.label89.Size = new System.Drawing.Size(34, 54);
@@ -1767,8 +1748,6 @@
             this.comboBox45.ForeColor = System.Drawing.SystemColors.WindowText;
             this.comboBox45.FormattingEnabled = true;
             this.comboBox45.Items.AddRange(new object[] {
-            "1",
-            "2",
             "3"});
             this.comboBox45.Location = new System.Drawing.Point(1336, 627);
             this.comboBox45.Margin = new System.Windows.Forms.Padding(4);
@@ -1792,7 +1771,7 @@
             // 
             this.label82.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label82.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label82.Location = new System.Drawing.Point(1012, 590);
+            this.label82.Location = new System.Drawing.Point(1010, 590);
             this.label82.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label82.Name = "label82";
             this.label82.Size = new System.Drawing.Size(34, 54);
@@ -1806,9 +1785,7 @@
             this.comboBox40.ForeColor = System.Drawing.SystemColors.WindowText;
             this.comboBox40.FormattingEnabled = true;
             this.comboBox40.Items.AddRange(new object[] {
-            "I",
-            "II",
-            "III"});
+            "II"});
             this.comboBox40.Location = new System.Drawing.Point(1064, 627);
             this.comboBox40.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox40.Name = "comboBox40";
@@ -1831,7 +1808,7 @@
             // 
             this.label131.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label131.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label131.Location = new System.Drawing.Point(24, 1398);
+            this.label131.Location = new System.Drawing.Point(23, 1398);
             this.label131.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label131.Name = "label131";
             this.label131.Size = new System.Drawing.Size(34, 54);
@@ -1892,7 +1869,7 @@
             // 
             this.label133.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label133.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label133.Location = new System.Drawing.Point(240, 1398);
+            this.label133.Location = new System.Drawing.Point(239, 1398);
             this.label133.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label133.Name = "label133";
             this.label133.Size = new System.Drawing.Size(34, 54);
@@ -2004,7 +1981,7 @@
             // 
             this.label51.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label51.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label51.Location = new System.Drawing.Point(608, 412);
+            this.label51.Location = new System.Drawing.Point(606, 412);
             this.label51.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(34, 54);
@@ -2058,7 +2035,7 @@
             // 
             this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label54.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label54.Location = new System.Drawing.Point(400, 412);
+            this.label54.Location = new System.Drawing.Point(398, 412);
             this.label54.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label54.Name = "label54";
             this.label54.Size = new System.Drawing.Size(34, 54);
@@ -2190,7 +2167,7 @@
             // 
             this.label61.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label61.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label61.Location = new System.Drawing.Point(190, 412);
+            this.label61.Location = new System.Drawing.Point(188, 412);
             this.label61.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label61.Name = "label61";
             this.label61.Size = new System.Drawing.Size(34, 54);
@@ -2282,7 +2259,7 @@
             // 
             this.label65.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label65.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label65.Location = new System.Drawing.Point(608, 494);
+            this.label65.Location = new System.Drawing.Point(606, 494);
             this.label65.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label65.Name = "label65";
             this.label65.Size = new System.Drawing.Size(34, 54);
@@ -2336,7 +2313,7 @@
             // 
             this.label68.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label68.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label68.Location = new System.Drawing.Point(400, 494);
+            this.label68.Location = new System.Drawing.Point(398, 494);
             this.label68.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label68.Name = "label68";
             this.label68.Size = new System.Drawing.Size(34, 54);
@@ -2468,7 +2445,7 @@
             // 
             this.label75.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label75.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label75.Location = new System.Drawing.Point(190, 494);
+            this.label75.Location = new System.Drawing.Point(188, 494);
             this.label75.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label75.Name = "label75";
             this.label75.Size = new System.Drawing.Size(34, 54);
@@ -2630,7 +2607,7 @@
             // 
             this.label169.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label169.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label169.Location = new System.Drawing.Point(248, 1621);
+            this.label169.Location = new System.Drawing.Point(246, 1621);
             this.label169.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label169.Name = "label169";
             this.label169.Size = new System.Drawing.Size(34, 54);
@@ -2684,7 +2661,7 @@
             // 
             this.label172.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label172.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label172.Location = new System.Drawing.Point(456, 1619);
+            this.label172.Location = new System.Drawing.Point(455, 1619);
             this.label172.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label172.Name = "label172";
             this.label172.Size = new System.Drawing.Size(34, 54);
@@ -2723,7 +2700,7 @@
             // 
             this.label174.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label174.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label174.Location = new System.Drawing.Point(458, 1694);
+            this.label174.Location = new System.Drawing.Point(455, 1694);
             this.label174.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label174.Name = "label174";
             this.label174.Size = new System.Drawing.Size(34, 54);
@@ -2793,7 +2770,7 @@
             // 
             this.label178.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label178.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label178.Location = new System.Drawing.Point(250, 1696);
+            this.label178.Location = new System.Drawing.Point(248, 1696);
             this.label178.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label178.Name = "label178";
             this.label178.Size = new System.Drawing.Size(34, 54);
@@ -2891,7 +2868,7 @@
             // 
             this.label185.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label185.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label185.Location = new System.Drawing.Point(456, 1773);
+            this.label185.Location = new System.Drawing.Point(455, 1773);
             this.label185.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label185.Name = "label185";
             this.label185.Size = new System.Drawing.Size(34, 54);
@@ -2961,7 +2938,7 @@
             // 
             this.label189.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label189.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label189.Location = new System.Drawing.Point(248, 1775);
+            this.label189.Location = new System.Drawing.Point(246, 1775);
             this.label189.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label189.Name = "label189";
             this.label189.Size = new System.Drawing.Size(34, 54);
@@ -3059,7 +3036,7 @@
             // 
             this.label196.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label196.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label196.Location = new System.Drawing.Point(458, 1854);
+            this.label196.Location = new System.Drawing.Point(455, 1854);
             this.label196.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label196.Name = "label196";
             this.label196.Size = new System.Drawing.Size(34, 54);
@@ -3129,7 +3106,7 @@
             // 
             this.label200.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label200.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label200.Location = new System.Drawing.Point(250, 1856);
+            this.label200.Location = new System.Drawing.Point(248, 1856);
             this.label200.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label200.Name = "label200";
             this.label200.Size = new System.Drawing.Size(34, 54);
@@ -3227,7 +3204,7 @@
             // 
             this.label207.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label207.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label207.Location = new System.Drawing.Point(458, 1935);
+            this.label207.Location = new System.Drawing.Point(455, 1935);
             this.label207.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label207.Name = "label207";
             this.label207.Size = new System.Drawing.Size(34, 54);
@@ -3297,7 +3274,7 @@
             // 
             this.label211.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label211.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label211.Location = new System.Drawing.Point(250, 1937);
+            this.label211.Location = new System.Drawing.Point(248, 1937);
             this.label211.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label211.Name = "label211";
             this.label211.Size = new System.Drawing.Size(34, 54);
@@ -3395,7 +3372,7 @@
             // 
             this.label218.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label218.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label218.Location = new System.Drawing.Point(456, 2015);
+            this.label218.Location = new System.Drawing.Point(455, 2015);
             this.label218.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label218.Name = "label218";
             this.label218.Size = new System.Drawing.Size(34, 54);
@@ -3465,7 +3442,7 @@
             // 
             this.label222.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label222.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label222.Location = new System.Drawing.Point(248, 2017);
+            this.label222.Location = new System.Drawing.Point(246, 2017);
             this.label222.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label222.Name = "label222";
             this.label222.Size = new System.Drawing.Size(34, 54);
@@ -3574,7 +3551,7 @@
             // 
             this.label93.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label93.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label93.Location = new System.Drawing.Point(1012, 669);
+            this.label93.Location = new System.Drawing.Point(1010, 669);
             this.label93.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label93.Name = "label93";
             this.label93.Size = new System.Drawing.Size(34, 54);
@@ -3588,8 +3565,6 @@
             this.comboBox44.ForeColor = System.Drawing.SystemColors.WindowText;
             this.comboBox44.FormattingEnabled = true;
             this.comboBox44.Items.AddRange(new object[] {
-            "I",
-            "II",
             "III"});
             this.comboBox44.Location = new System.Drawing.Point(1064, 706);
             this.comboBox44.Margin = new System.Windows.Forms.Padding(4);
@@ -3614,9 +3589,7 @@
             this.comboBox46.ForeColor = System.Drawing.SystemColors.WindowText;
             this.comboBox46.FormattingEnabled = true;
             this.comboBox46.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3"});
+            "2"});
             this.comboBox46.Location = new System.Drawing.Point(1336, 706);
             this.comboBox46.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox46.Name = "comboBox46";
@@ -3639,7 +3612,7 @@
             // 
             this.label96.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label96.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label96.Location = new System.Drawing.Point(796, 667);
+            this.label96.Location = new System.Drawing.Point(794, 667);
             this.label96.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label96.Name = "label96";
             this.label96.Size = new System.Drawing.Size(34, 54);
@@ -3653,9 +3626,7 @@
             this.comboBox47.ForeColor = System.Drawing.SystemColors.WindowText;
             this.comboBox47.FormattingEnabled = true;
             this.comboBox47.Items.AddRange(new object[] {
-            "I",
-            "II",
-            "III"});
+            "I"});
             this.comboBox47.Location = new System.Drawing.Point(844, 706);
             this.comboBox47.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox47.Name = "comboBox47";
@@ -3678,7 +3649,7 @@
             // 
             this.label98.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label98.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label98.Location = new System.Drawing.Point(1392, 667);
+            this.label98.Location = new System.Drawing.Point(1390, 667);
             this.label98.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label98.Name = "label98";
             this.label98.Size = new System.Drawing.Size(34, 54);
@@ -3717,7 +3688,7 @@
             // 
             this.label100.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label100.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label100.Location = new System.Drawing.Point(1272, 667);
+            this.label100.Location = new System.Drawing.Point(1270, 667);
             this.label100.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label100.Name = "label100";
             this.label100.Size = new System.Drawing.Size(34, 54);
@@ -3764,12 +3735,7 @@
             this.comboBox49.ForeColor = System.Drawing.SystemColors.WindowText;
             this.comboBox49.FormattingEnabled = true;
             this.comboBox49.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6"});
+            "5"});
             this.comboBox49.Location = new System.Drawing.Point(688, 706);
             this.comboBox49.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox49.Name = "comboBox49";
@@ -3793,12 +3759,7 @@
             this.comboBox50.ForeColor = System.Drawing.SystemColors.WindowText;
             this.comboBox50.FormattingEnabled = true;
             this.comboBox50.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6"});
+            "2"});
             this.comboBox50.Location = new System.Drawing.Point(532, 706);
             this.comboBox50.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox50.Name = "comboBox50";
@@ -3822,12 +3783,7 @@
             this.comboBox51.ForeColor = System.Drawing.SystemColors.WindowText;
             this.comboBox51.FormattingEnabled = true;
             this.comboBox51.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6"});
+            "1"});
             this.comboBox51.Location = new System.Drawing.Point(376, 706);
             this.comboBox51.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox51.Name = "comboBox51";
@@ -3850,7 +3806,7 @@
             // 
             this.label107.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label107.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label107.Location = new System.Drawing.Point(188, 667);
+            this.label107.Location = new System.Drawing.Point(186, 667);
             this.label107.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label107.Name = "label107";
             this.label107.Size = new System.Drawing.Size(34, 54);
@@ -3865,9 +3821,7 @@
             this.comboBox52.ForeColor = System.Drawing.SystemColors.WindowText;
             this.comboBox52.FormattingEnabled = true;
             this.comboBox52.Items.AddRange(new object[] {
-            "I",
-            "II",
-            "III"});
+            "II"});
             this.comboBox52.Location = new System.Drawing.Point(240, 706);
             this.comboBox52.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox52.Name = "comboBox52";
@@ -3901,7 +3855,7 @@
             // 
             this.label110.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label110.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label110.Location = new System.Drawing.Point(1012, 750);
+            this.label110.Location = new System.Drawing.Point(1010, 750);
             this.label110.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label110.Name = "label110";
             this.label110.Size = new System.Drawing.Size(34, 54);
@@ -3915,9 +3869,7 @@
             this.comboBox53.ForeColor = System.Drawing.SystemColors.WindowText;
             this.comboBox53.FormattingEnabled = true;
             this.comboBox53.Items.AddRange(new object[] {
-            "I",
-            "II",
-            "III"});
+            "II"});
             this.comboBox53.Location = new System.Drawing.Point(1064, 787);
             this.comboBox53.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox53.Name = "comboBox53";
@@ -3966,7 +3918,7 @@
             // 
             this.label113.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label113.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label113.Location = new System.Drawing.Point(796, 748);
+            this.label113.Location = new System.Drawing.Point(794, 748);
             this.label113.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label113.Name = "label113";
             this.label113.Size = new System.Drawing.Size(34, 54);
@@ -3980,9 +3932,7 @@
             this.comboBox55.ForeColor = System.Drawing.SystemColors.WindowText;
             this.comboBox55.FormattingEnabled = true;
             this.comboBox55.Items.AddRange(new object[] {
-            "I",
-            "II",
-            "III"});
+            "I"});
             this.comboBox55.Location = new System.Drawing.Point(844, 787);
             this.comboBox55.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox55.Name = "comboBox55";
@@ -4005,7 +3955,7 @@
             // 
             this.label115.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label115.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label115.Location = new System.Drawing.Point(1392, 748);
+            this.label115.Location = new System.Drawing.Point(1390, 748);
             this.label115.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label115.Name = "label115";
             this.label115.Size = new System.Drawing.Size(34, 54);
@@ -4044,7 +3994,7 @@
             // 
             this.label120.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label120.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label120.Location = new System.Drawing.Point(1272, 748);
+            this.label120.Location = new System.Drawing.Point(1270, 748);
             this.label120.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label120.Name = "label120";
             this.label120.Size = new System.Drawing.Size(34, 54);
@@ -4091,11 +4041,6 @@
             this.comboBox58.ForeColor = System.Drawing.SystemColors.WindowText;
             this.comboBox58.FormattingEnabled = true;
             this.comboBox58.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
             "6"});
             this.comboBox58.Location = new System.Drawing.Point(688, 787);
             this.comboBox58.Margin = new System.Windows.Forms.Padding(4);
@@ -4120,12 +4065,7 @@
             this.comboBox59.ForeColor = System.Drawing.SystemColors.WindowText;
             this.comboBox59.FormattingEnabled = true;
             this.comboBox59.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6"});
+            "4"});
             this.comboBox59.Location = new System.Drawing.Point(532, 787);
             this.comboBox59.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox59.Name = "comboBox59";
@@ -4149,12 +4089,7 @@
             this.comboBox61.ForeColor = System.Drawing.SystemColors.WindowText;
             this.comboBox61.FormattingEnabled = true;
             this.comboBox61.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6"});
+            "1"});
             this.comboBox61.Location = new System.Drawing.Point(376, 787);
             this.comboBox61.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox61.Name = "comboBox61";
@@ -4177,7 +4112,7 @@
             // 
             this.label127.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label127.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label127.Location = new System.Drawing.Point(188, 748);
+            this.label127.Location = new System.Drawing.Point(186, 748);
             this.label127.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label127.Name = "label127";
             this.label127.Size = new System.Drawing.Size(34, 54);
@@ -4192,8 +4127,6 @@
             this.comboBox62.ForeColor = System.Drawing.SystemColors.WindowText;
             this.comboBox62.FormattingEnabled = true;
             this.comboBox62.Items.AddRange(new object[] {
-            "I",
-            "II",
             "III"});
             this.comboBox62.Location = new System.Drawing.Point(240, 787);
             this.comboBox62.Margin = new System.Windows.Forms.Padding(4);
@@ -4264,9 +4197,7 @@
             this.comboBox63.ForeColor = System.Drawing.SystemColors.WindowText;
             this.comboBox63.FormattingEnabled = true;
             this.comboBox63.Items.AddRange(new object[] {
-            "I",
-            "II",
-            "III"});
+            "II"});
             this.comboBox63.Location = new System.Drawing.Point(186, 892);
             this.comboBox63.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox63.Name = "comboBox63";
@@ -4304,8 +4235,6 @@
             this.comboBox64.ForeColor = System.Drawing.SystemColors.WindowText;
             this.comboBox64.FormattingEnabled = true;
             this.comboBox64.Items.AddRange(new object[] {
-            "I",
-            "II",
             "III"});
             this.comboBox64.Location = new System.Drawing.Point(326, 892);
             this.comboBox64.Margin = new System.Windows.Forms.Padding(4);
@@ -4384,9 +4313,7 @@
             this.comboBox66.ForeColor = System.Drawing.SystemColors.WindowText;
             this.comboBox66.FormattingEnabled = true;
             this.comboBox66.Items.AddRange(new object[] {
-            "I",
-            "II",
-            "III"});
+            "II"});
             this.comboBox66.Location = new System.Drawing.Point(186, 967);
             this.comboBox66.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox66.Name = "comboBox66";
@@ -4496,9 +4423,7 @@
             this.comboBox73.ForeColor = System.Drawing.SystemColors.WindowText;
             this.comboBox73.FormattingEnabled = true;
             this.comboBox73.Items.AddRange(new object[] {
-            "I",
-            "II",
-            "III"});
+            "I"});
             this.comboBox73.Location = new System.Drawing.Point(186, 1042);
             this.comboBox73.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox73.Name = "comboBox73";
@@ -4608,8 +4533,6 @@
             this.comboBox75.ForeColor = System.Drawing.SystemColors.WindowText;
             this.comboBox75.FormattingEnabled = true;
             this.comboBox75.Items.AddRange(new object[] {
-            "I",
-            "II",
             "III"});
             this.comboBox75.Location = new System.Drawing.Point(186, 1117);
             this.comboBox75.Margin = new System.Windows.Forms.Padding(4);
@@ -4680,9 +4603,7 @@
             this.comboBox76.ForeColor = System.Drawing.SystemColors.WindowText;
             this.comboBox76.FormattingEnabled = true;
             this.comboBox76.Items.AddRange(new object[] {
-            "I",
-            "II",
-            "III"});
+            "II"});
             this.comboBox76.Location = new System.Drawing.Point(326, 1192);
             this.comboBox76.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox76.Name = "comboBox76";
@@ -4720,9 +4641,7 @@
             this.comboBox77.ForeColor = System.Drawing.SystemColors.WindowText;
             this.comboBox77.FormattingEnabled = true;
             this.comboBox77.Items.AddRange(new object[] {
-            "I",
-            "II",
-            "III"});
+            "I"});
             this.comboBox77.Location = new System.Drawing.Point(186, 1192);
             this.comboBox77.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox77.Name = "comboBox77";
@@ -4792,8 +4711,6 @@
             this.comboBox78.ForeColor = System.Drawing.SystemColors.WindowText;
             this.comboBox78.FormattingEnabled = true;
             this.comboBox78.Items.AddRange(new object[] {
-            "I",
-            "II",
             "III"});
             this.comboBox78.Location = new System.Drawing.Point(326, 1267);
             this.comboBox78.Margin = new System.Windows.Forms.Padding(4);
@@ -4832,9 +4749,7 @@
             this.comboBox79.ForeColor = System.Drawing.SystemColors.WindowText;
             this.comboBox79.FormattingEnabled = true;
             this.comboBox79.Items.AddRange(new object[] {
-            "I",
-            "II",
-            "III"});
+            "I"});
             this.comboBox79.Location = new System.Drawing.Point(186, 1267);
             this.comboBox79.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox79.Name = "comboBox79";
@@ -5238,11 +5153,6 @@
             this.comboBox80.ForeColor = System.Drawing.SystemColors.WindowText;
             this.comboBox80.FormattingEnabled = true;
             this.comboBox80.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
             "6"});
             this.comboBox80.Location = new System.Drawing.Point(957, 627);
             this.comboBox80.Margin = new System.Windows.Forms.Padding(4);
@@ -5256,12 +5166,7 @@
             this.comboBox81.ForeColor = System.Drawing.SystemColors.WindowText;
             this.comboBox81.FormattingEnabled = true;
             this.comboBox81.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6"});
+            "5"});
             this.comboBox81.Location = new System.Drawing.Point(957, 706);
             this.comboBox81.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox81.Name = "comboBox81";
@@ -5274,11 +5179,6 @@
             this.comboBox82.ForeColor = System.Drawing.SystemColors.WindowText;
             this.comboBox82.FormattingEnabled = true;
             this.comboBox82.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
             "6"});
             this.comboBox82.Location = new System.Drawing.Point(957, 787);
             this.comboBox82.Margin = new System.Windows.Forms.Padding(4);
@@ -5292,12 +5192,7 @@
             this.comboBox83.ForeColor = System.Drawing.SystemColors.WindowText;
             this.comboBox83.FormattingEnabled = true;
             this.comboBox83.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6"});
+            "1"});
             this.comboBox83.Location = new System.Drawing.Point(1169, 787);
             this.comboBox83.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox83.Name = "comboBox83";
@@ -5310,12 +5205,7 @@
             this.comboBox84.ForeColor = System.Drawing.SystemColors.WindowText;
             this.comboBox84.FormattingEnabled = true;
             this.comboBox84.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6"});
+            "1"});
             this.comboBox84.Location = new System.Drawing.Point(1169, 706);
             this.comboBox84.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox84.Name = "comboBox84";
@@ -5328,12 +5218,7 @@
             this.comboBox85.ForeColor = System.Drawing.SystemColors.WindowText;
             this.comboBox85.FormattingEnabled = true;
             this.comboBox85.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6"});
+            "5"});
             this.comboBox85.Location = new System.Drawing.Point(1169, 627);
             this.comboBox85.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox85.Name = "comboBox85";

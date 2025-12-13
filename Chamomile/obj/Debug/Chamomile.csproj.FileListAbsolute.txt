@@ -30,3 +30,8 @@ L:\Chamomile\Chamomile\obj\Debug\Chamomile.exe
 L:\Chamomile\Chamomile\obj\Debug\Chamomile.pdb
 L:\Chamomile\Chamomile\obj\Debug\Chamomile.DiagnosticsControl.resources
 L:\Chamomile\Chamomile\obj\Debug\Chamomile.EconomyControl.resources
+L:\Chamomile\Chamomile\bin\Debug\MathNet.Numerics.dll
+L:\Chamomile\Chamomile\bin\Debug\System.ValueTuple.dll
+L:\Chamomile\Chamomile\bin\Debug\MathNet.Numerics.xml
+L:\Chamomile\Chamomile\bin\Debug\System.ValueTuple.xml
+L:\Chamomile\Chamomile\obj\Debug\Chamomile.csproj.Up2Date
