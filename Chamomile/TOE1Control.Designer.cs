@@ -2675,9 +2675,7 @@
             this.comboBox29.ForeColor = System.Drawing.SystemColors.WindowText;
             this.comboBox29.FormattingEnabled = true;
             this.comboBox29.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3"});
+            "2"});
             this.comboBox29.Location = new System.Drawing.Point(516, 1652);
             this.comboBox29.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox29.Name = "comboBox29";
@@ -2784,12 +2782,7 @@
             this.comboBox31.ForeColor = System.Drawing.SystemColors.WindowText;
             this.comboBox31.FormattingEnabled = true;
             this.comboBox31.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6"});
+            "2"});
             this.comboBox31.Location = new System.Drawing.Point(300, 1727);
             this.comboBox31.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox31.Name = "comboBox31";
@@ -2882,8 +2875,6 @@
             this.comboBox32.ForeColor = System.Drawing.SystemColors.WindowText;
             this.comboBox32.FormattingEnabled = true;
             this.comboBox32.Items.AddRange(new object[] {
-            "1",
-            "2",
             "3"});
             this.comboBox32.Location = new System.Drawing.Point(516, 1806);
             this.comboBox32.Margin = new System.Windows.Forms.Padding(4);
@@ -3120,12 +3111,7 @@
             this.comboBox35.ForeColor = System.Drawing.SystemColors.WindowText;
             this.comboBox35.FormattingEnabled = true;
             this.comboBox35.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6"});
+            "3"});
             this.comboBox35.Location = new System.Drawing.Point(300, 1887);
             this.comboBox35.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox35.Name = "comboBox35";
@@ -3288,12 +3274,7 @@
             this.comboBox39.ForeColor = System.Drawing.SystemColors.WindowText;
             this.comboBox39.FormattingEnabled = true;
             this.comboBox39.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6"});
+            "4"});
             this.comboBox39.Location = new System.Drawing.Point(300, 1967);
             this.comboBox39.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox39.Name = "comboBox39";
@@ -4939,6 +4920,7 @@
             this.textBox33.Name = "textBox33";
             this.textBox33.Size = new System.Drawing.Size(104, 31);
             this.textBox33.TabIndex = 855;
+            this.textBox33.Text = "0,0306";
             // 
             // textBox34
             // 
@@ -4966,6 +4948,7 @@
             this.textBox36.Name = "textBox36";
             this.textBox36.Size = new System.Drawing.Size(104, 31);
             this.textBox36.TabIndex = 857;
+            this.textBox36.Text = "0,2273";
             // 
             // textBox37
             // 
@@ -4984,6 +4967,7 @@
             this.textBox38.Name = "textBox38";
             this.textBox38.Size = new System.Drawing.Size(104, 31);
             this.textBox38.TabIndex = 859;
+            this.textBox38.Text = "0,3861";
             // 
             // textBox39
             // 
@@ -5002,6 +4986,7 @@
             this.textBox40.Name = "textBox40";
             this.textBox40.Size = new System.Drawing.Size(104, 31);
             this.textBox40.TabIndex = 865;
+            this.textBox40.Text = "0,1279";
             // 
             // textBox41
             // 
@@ -5020,6 +5005,7 @@
             this.textBox42.Name = "textBox42";
             this.textBox42.Size = new System.Drawing.Size(104, 31);
             this.textBox42.TabIndex = 863;
+            this.textBox42.Text = "0,1587";
             // 
             // textBox43
             // 
@@ -5038,6 +5024,7 @@
             this.textBox44.Name = "textBox44";
             this.textBox44.Size = new System.Drawing.Size(104, 31);
             this.textBox44.TabIndex = 861;
+            this.textBox44.Text = "0,2582";
             // 
             // label139
             // 
@@ -5098,7 +5085,7 @@
             // 
             this.label148.AutoSize = true;
             this.label148.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label148.Location = new System.Drawing.Point(-2, 496);
+            this.label148.Location = new System.Drawing.Point(-4, 496);
             this.label148.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label148.Name = "label148";
             this.label148.Size = new System.Drawing.Size(188, 61);
@@ -5109,7 +5096,7 @@
             // 
             this.label149.AutoSize = true;
             this.label149.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label149.Location = new System.Drawing.Point(-6, 748);
+            this.label149.Location = new System.Drawing.Point(-7, 748);
             this.label149.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label149.Name = "label149";
             this.label149.Size = new System.Drawing.Size(188, 61);

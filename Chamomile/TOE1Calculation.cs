@@ -39,8 +39,10 @@ namespace Chamomile
                 EMF[2] = double.Parse(toeControl.TextBox3.Text);
             }
 
-            //Method1(toeControl, resistors, EMF);
+            /*Method1(toeControl, resistors, EMF);
             Method2(toeControl, resistors, EMF);
+            PowerBalance(toeControl, resistors, EMF);*/
+            PotentialDiagram(toeControl);
 
         }
 
@@ -952,6 +954,438 @@ namespace Chamomile
             toeControl.TextBox43.Text = I4.ToString();
             toeControl.TextBox41.Text = I5.ToString();
             toeControl.TextBox39.Text = I6.ToString();
+        }
+
+        public static void PowerBalance(TOE1Control toeControl, double[] resistors, double[] EMF)
+        {
+            double boof = 0;
+            double sourcePower = 0, consumerPower;
+
+            consumerPower = resistors[0]*double.Parse(toeControl.TextBox33.Text)* double.Parse(toeControl.TextBox33.Text) + resistors[1] * double.Parse(toeControl.TextBox36.Text) * double.Parse(toeControl.TextBox36.Text) + resistors[2] * double.Parse(toeControl.TextBox38.Text) * double.Parse(toeControl.TextBox38.Text) + resistors[3] * double.Parse(toeControl.TextBox44.Text) * double.Parse(toeControl.TextBox44.Text) + resistors[4] * double.Parse(toeControl.TextBox42.Text) * double.Parse(toeControl.TextBox42.Text) + resistors[5] * double.Parse(toeControl.TextBox40.Text) * double.Parse(toeControl.TextBox40.Text);
+
+            switch (toeControl.ComboBox67.Text)
+            {
+                case "1":
+                    boof = double.Parse(toeControl.TextBox33.Text);
+                    break;
+                case "2":
+                    boof = double.Parse(toeControl.TextBox36.Text);
+                    break;
+                case "3":
+                    boof = double.Parse(toeControl.TextBox38.Text);
+                    break;
+                case "4":
+                    boof = double.Parse(toeControl.TextBox44.Text);
+                    break;
+                case "5":
+                    boof = double.Parse(toeControl.TextBox42.Text);
+                    break;
+                case "6":
+                    boof = double.Parse(toeControl.TextBox40.Text);
+                    break;
+            }
+
+            if (toeControl.Label131.Text == "+")
+                sourcePower += EMF[int.Parse(toeControl.ComboBox68.Text) - 1] * boof;
+            else sourcePower -= EMF[int.Parse(toeControl.ComboBox68.Text) - 1] * boof;
+
+            switch (toeControl.ComboBox69.Text)
+            {
+                case "1":
+                    boof = double.Parse(toeControl.TextBox33.Text);
+                    break;
+                case "2":
+                    boof = double.Parse(toeControl.TextBox36.Text);
+                    break;
+                case "3":
+                    boof = double.Parse(toeControl.TextBox38.Text);
+                    break;
+                case "4":
+                    boof = double.Parse(toeControl.TextBox44.Text);
+                    break;
+                case "5":
+                    boof = double.Parse(toeControl.TextBox42.Text);
+                    break;
+                case "6":
+                    boof = double.Parse(toeControl.TextBox40.Text);
+                    break;
+            }
+
+            if (toeControl.Label133.Text == "+")
+                sourcePower += EMF[int.Parse(toeControl.ComboBox70.Text) - 1] * boof;
+            else sourcePower -= EMF[int.Parse(toeControl.ComboBox70.Text) - 1] * boof;
+
+            toeControl.TextBox45.Text = sourcePower.ToString();
+            toeControl.TextBox21.Text = consumerPower.ToString();
+
+        }
+
+        public static void PotentialDiagram(TOE1Control toeControl)
+        {
+            double[,] matrix = new double[2,7];
+            double boof = 0, boofR = 0;
+            ////  |R|
+            ///   |E|
+            matrix[0, 0] = 0;
+            matrix[1, 0] = 0;
+            
+
+            switch (toeControl.ComboBox28.Text)
+            {
+                case "1":
+                    boof = double.Parse(toeControl.TextBox33.Text) * double.Parse(toeControl.TextBox4.Text);
+                    boofR = double.Parse(toeControl.TextBox4.Text);
+                    break;
+                case "2":
+                    boof = double.Parse(toeControl.TextBox36.Text) * double.Parse(toeControl.TextBox5.Text);
+                    boofR = double.Parse(toeControl.TextBox5.Text);
+                    break;
+                case "3":
+                    boof = double.Parse(toeControl.TextBox38.Text) * double.Parse(toeControl.TextBox7.Text);
+                    boofR = double.Parse(toeControl.TextBox7.Text);
+                    break;
+                case "4":
+                    boof = double.Parse(toeControl.TextBox44.Text) * double.Parse(toeControl.TextBox6.Text);
+                    boofR = double.Parse(toeControl.TextBox6.Text);
+                    break;
+                case "5":
+                    boof = double.Parse(toeControl.TextBox42.Text) * double.Parse(toeControl.TextBox9.Text);
+                    boofR = double.Parse(toeControl.TextBox9.Text);
+                    break;
+                case "6":
+                    boof = double.Parse(toeControl.TextBox40.Text) * double.Parse(toeControl.TextBox8.Text);
+                    boofR = double.Parse(toeControl.TextBox8.Text);
+                    break;
+                case "Выберите":
+                    boof = 0;
+                    boofR = 0;
+                    break;
+            }
+
+            if (toeControl.Label169.Text == "+")
+                matrix[1, 1] = matrix[1, 0] + boof;
+            else matrix[1, 1] = matrix[1, 0] - boof;
+
+            switch (toeControl.ComboBox29.Text)
+            {
+                case "1":
+                    boof = double.Parse(toeControl.TextBox1.Text);
+                    break;
+                case "2":
+                    boof = double.Parse(toeControl.TextBox2.Text);
+                    break;
+                case "3":
+                    boof = double.Parse(toeControl.TextBox3.Text);
+                    break;
+                case "Выберите":
+                    boof = 0;
+                    break;
+            }
+
+            if (toeControl.Label172.Text == "+")
+                matrix[1, 1] = matrix[1, 1] + boof;
+            else matrix[1, 1] = matrix[1, 1] - boof;
+
+            matrix[0,1] = matrix[0,0] + boofR;
+            ////////////////////////////////////////////////////////////////////
+
+            switch (toeControl.ComboBox31.Text)
+            {
+                case "1":
+                    boof = double.Parse(toeControl.TextBox33.Text) * double.Parse(toeControl.TextBox4.Text);
+                    boofR = double.Parse(toeControl.TextBox4.Text);
+                    break;
+                case "2":
+                    boof = double.Parse(toeControl.TextBox36.Text) * double.Parse(toeControl.TextBox5.Text);
+                    boofR = double.Parse(toeControl.TextBox5.Text);
+                    break;
+                case "3":
+                    boof = double.Parse(toeControl.TextBox38.Text) * double.Parse(toeControl.TextBox7.Text);
+                    boofR = double.Parse(toeControl.TextBox7.Text);
+                    break;
+                case "4":
+                    boof = double.Parse(toeControl.TextBox44.Text) * double.Parse(toeControl.TextBox6.Text);
+                    boofR = double.Parse(toeControl.TextBox6.Text);
+                    break;
+                case "5":
+                    boof = double.Parse(toeControl.TextBox42.Text) * double.Parse(toeControl.TextBox9.Text);
+                    boofR = double.Parse(toeControl.TextBox9.Text);
+                    break;
+                case "6":
+                    boof = double.Parse(toeControl.TextBox40.Text) * double.Parse(toeControl.TextBox8.Text);
+                    boofR = double.Parse(toeControl.TextBox8.Text);
+                    break;
+                case "Выберите":
+                    boof = 0;
+                    boofR = 0;
+                    break;
+            }
+
+            if (toeControl.Label178.Text == "+")
+                matrix[1, 2] = matrix[1, 1] + boof;
+            else matrix[1, 2] = matrix[1, 1] - boof;
+
+
+            switch (toeControl.ComboBox30.Text)
+            {
+                case "1":
+                    boof = double.Parse(toeControl.TextBox1.Text);
+                    break;
+                case "2":
+                    boof = double.Parse(toeControl.TextBox2.Text);
+                    break;
+                case "3":
+                    boof = double.Parse(toeControl.TextBox3.Text);
+                    break;
+                case "Выберите":
+                    boof = 0;
+                    break;
+            }
+
+            if (toeControl.Label174.Text == "+")
+                matrix[1, 2] = matrix[1, 2] + boof;
+            else matrix[1, 2] = matrix[1, 2] - boof;
+
+            matrix[0, 2] = matrix[0, 1] + boofR;
+            //////////////////////////////////////////////////
+            switch (toeControl.ComboBox33.Text)
+            {
+                case "1":
+                    boof = double.Parse(toeControl.TextBox33.Text) * double.Parse(toeControl.TextBox4.Text);
+                    boofR = double.Parse(toeControl.TextBox4.Text);
+                    break;
+                case "2":
+                    boof = double.Parse(toeControl.TextBox36.Text) * double.Parse(toeControl.TextBox5.Text);
+                    boofR = double.Parse(toeControl.TextBox5.Text);
+                    break;
+                case "3":
+                    boof = double.Parse(toeControl.TextBox38.Text) * double.Parse(toeControl.TextBox7.Text);
+                    boofR = double.Parse(toeControl.TextBox7.Text);
+                    break;
+                case "4":
+                    boof = double.Parse(toeControl.TextBox44.Text) * double.Parse(toeControl.TextBox6.Text);
+                    boofR = double.Parse(toeControl.TextBox6.Text);
+                    break;
+                case "5":
+                    boof = double.Parse(toeControl.TextBox42.Text) * double.Parse(toeControl.TextBox9.Text);
+                    boofR = double.Parse(toeControl.TextBox9.Text);
+                    break;
+                case "6":
+                    boof = double.Parse(toeControl.TextBox40.Text) * double.Parse(toeControl.TextBox8.Text);
+                    boofR = double.Parse(toeControl.TextBox8.Text);
+                    break;
+                case "Выберите":
+                    boof = 0;
+                    boofR = 0;
+                    break;
+            }
+
+            if (toeControl.Label189.Text == "+")
+                matrix[1, 3] = matrix[1, 2] + boof;
+            else matrix[1, 3] = matrix[1, 2] - boof;
+
+            switch (toeControl.ComboBox32.Text)
+            {
+                case "1":
+                    boof = double.Parse(toeControl.TextBox1.Text);
+                    break;
+                case "2":
+                    boof = double.Parse(toeControl.TextBox2.Text);
+                    break;
+                case "3":
+                    boof = double.Parse(toeControl.TextBox3.Text);
+                    break;
+                case "Выберите":
+                    boof = 0;
+                    break;
+            }
+
+            if (toeControl.Label185.Text == "+")
+                matrix[1, 3] = matrix[1, 3] + boof;
+            else matrix[1, 3] = matrix[1, 3] - boof;
+
+            matrix[0, 3] = matrix[0, 2] + boofR;
+            ////////////////////////////////////////////////
+            switch (toeControl.ComboBox35.Text)
+            {
+                case "1":
+                    boof = double.Parse(toeControl.TextBox33.Text) * double.Parse(toeControl.TextBox4.Text);
+                    boofR = double.Parse(toeControl.TextBox4.Text);
+                    break;
+                case "2":
+                    boof = double.Parse(toeControl.TextBox36.Text) * double.Parse(toeControl.TextBox5.Text);
+                    boofR = double.Parse(toeControl.TextBox5.Text);
+                    break;
+                case "3":
+                    boof = double.Parse(toeControl.TextBox38.Text) * double.Parse(toeControl.TextBox7.Text);
+                    boofR = double.Parse(toeControl.TextBox7.Text);
+                    break;
+                case "4":
+                    boof = double.Parse(toeControl.TextBox44.Text) * double.Parse(toeControl.TextBox6.Text);
+                    boofR = double.Parse(toeControl.TextBox6.Text);
+                    break;
+                case "5":
+                    boof = double.Parse(toeControl.TextBox42.Text) * double.Parse(toeControl.TextBox9.Text);
+                    boofR = double.Parse(toeControl.TextBox9.Text);
+                    break;
+                case "6":
+                    boof = double.Parse(toeControl.TextBox40.Text) * double.Parse(toeControl.TextBox8.Text);
+                    boofR = double.Parse(toeControl.TextBox8.Text);
+                    break;
+                case "Выберите":
+                    boof = 0;
+                    boofR = 0;
+                    break;
+            }
+
+            if (toeControl.Label200.Text == "+")
+                matrix[1, 4] = matrix[1, 3] + boof;
+            else matrix[1, 4] = matrix[1, 3] - boof;
+
+            switch (toeControl.ComboBox34.Text)
+            {
+                case "1":
+                    boof = double.Parse(toeControl.TextBox1.Text);
+                    break;
+                case "2":
+                    boof = double.Parse(toeControl.TextBox2.Text);
+                    break;
+                case "3":
+                    boof = double.Parse(toeControl.TextBox3.Text);
+                    break;
+                case "Выберите":
+                    boof = 0;
+                    break;
+            }
+
+            if (toeControl.Label196.Text == "+")
+                matrix[1, 4] = matrix[1, 4] + boof;
+            else matrix[1, 4] = matrix[1, 4] - boof;
+
+            matrix[0, 4] = matrix[0, 3] + boofR;
+            ////////////////////////////////////////////////////////////////////
+            switch (toeControl.ComboBox39.Text)
+            {
+                case "1":
+                    boof = double.Parse(toeControl.TextBox33.Text) * double.Parse(toeControl.TextBox4.Text);
+                    boofR = double.Parse(toeControl.TextBox4.Text);
+                    break;
+                case "2":
+                    boof = double.Parse(toeControl.TextBox36.Text) * double.Parse(toeControl.TextBox5.Text);
+                    boofR = double.Parse(toeControl.TextBox5.Text);
+                    break;
+                case "3":
+                    boof = double.Parse(toeControl.TextBox38.Text) * double.Parse(toeControl.TextBox7.Text);
+                    boofR = double.Parse(toeControl.TextBox7.Text);
+                    break;
+                case "4":
+                    boof = double.Parse(toeControl.TextBox44.Text) * double.Parse(toeControl.TextBox6.Text);
+                    boofR = double.Parse(toeControl.TextBox6.Text);
+                    break;
+                case "5":
+                    boof = double.Parse(toeControl.TextBox42.Text) * double.Parse(toeControl.TextBox9.Text);
+                    boofR = double.Parse(toeControl.TextBox9.Text);
+                    break;
+                case "6":
+                    boof = double.Parse(toeControl.TextBox40.Text) * double.Parse(toeControl.TextBox8.Text);
+                    boofR = double.Parse(toeControl.TextBox8.Text);
+                    break;
+                case "Выберите":
+                    boof = 0;
+                    boofR = 0;
+                    break;
+            }
+
+            if (toeControl.Label211.Text == "+")
+                matrix[1, 5] = matrix[1, 4] + boof;
+            else matrix[1, 5] = matrix[1, 4] - boof;
+
+            switch (toeControl.ComboBox36.Text)
+            {
+                case "1":
+                    boof = double.Parse(toeControl.TextBox1.Text);
+                    break;
+                case "2":
+                    boof = double.Parse(toeControl.TextBox2.Text);
+                    break;
+                case "3":
+                    boof = double.Parse(toeControl.TextBox3.Text);
+                    break;
+                case "Выберите":
+                    boof = 0;
+                    break;
+            }
+
+            if (toeControl.Label207.Text == "+")
+                matrix[1, 5] = matrix[1, 5] + boof;
+            else matrix[1, 5] = matrix[1, 5] - boof;
+
+            matrix[0, 5] = matrix[0, 4] + boofR;
+            ///////////////////////////////////////////////////////////////////////
+            switch (toeControl.ComboBox71.Text)
+            {
+                case "1":
+                    boof = double.Parse(toeControl.TextBox33.Text) * double.Parse(toeControl.TextBox4.Text);
+                    boofR = double.Parse(toeControl.TextBox4.Text);
+                    break;
+                case "2":
+                    boof = double.Parse(toeControl.TextBox36.Text) * double.Parse(toeControl.TextBox5.Text);
+                    boofR = double.Parse(toeControl.TextBox5.Text);
+                    break;
+                case "3":
+                    boof = double.Parse(toeControl.TextBox38.Text) * double.Parse(toeControl.TextBox7.Text);
+                    boofR = double.Parse(toeControl.TextBox7.Text);
+                    break;
+                case "4":
+                    boof = double.Parse(toeControl.TextBox44.Text) * double.Parse(toeControl.TextBox6.Text);
+                    boofR = double.Parse(toeControl.TextBox6.Text);
+                    break;
+                case "5":
+                    boof = double.Parse(toeControl.TextBox42.Text) * double.Parse(toeControl.TextBox9.Text);
+                    boofR = double.Parse(toeControl.TextBox9.Text);
+                    break;
+                case "6":
+                    boof = double.Parse(toeControl.TextBox40.Text) * double.Parse(toeControl.TextBox8.Text);
+                    boofR = double.Parse(toeControl.TextBox8.Text);
+                    break;
+                case "Выберите":
+                    boof = 0;
+                    boofR = 0;
+                    break;
+            }
+
+            if (toeControl.Label222.Text == "+")
+                matrix[1, 6] = matrix[1, 5] + boof;
+            else matrix[1, 6] = matrix[1, 5] - boof;
+
+            switch (toeControl.ComboBox41.Text)
+            {
+                case "1":
+                    boof = double.Parse(toeControl.TextBox1.Text);
+                    break;
+                case "2":
+                    boof = double.Parse(toeControl.TextBox2.Text);
+                    break;
+                case "3":
+                    boof = double.Parse(toeControl.TextBox3.Text);
+                    break;
+                case "Выберите":
+                    boof = 0;
+                    break;
+            }
+
+            if (toeControl.Label218.Text == "+")
+                matrix[1, 6] = matrix[1, 6] + boof;
+            else matrix[1, 6] = matrix[1, 6] - boof;
+
+            matrix[0, 6] = matrix[0, 5] + boofR;
+
+            toeControl.TextBox22.Text = matrix[1, 1].ToString();
+            toeControl.TextBox29.Text = matrix[1, 2].ToString();
+            toeControl.TextBox30.Text = matrix[1, 3].ToString();
+            toeControl.TextBox31.Text = matrix[1, 4].ToString();
+            toeControl.TextBox32.Text = matrix[1, 5].ToString();
+            toeControl.TextBox46.Text = matrix[1, 6].ToString();
         }
     }
 }
