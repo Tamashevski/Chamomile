@@ -47,6 +47,7 @@
             // 
             this.menuStrip1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.тОЭToolStripMenuItem,
@@ -55,7 +56,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(22, 7, 0, 7);
-            this.menuStrip1.Size = new System.Drawing.Size(971, 31);
+            this.menuStrip1.Size = new System.Drawing.Size(971, 52);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -66,42 +67,42 @@
             this.раздел2ToolStripMenuItem,
             this.раздел3ToolStripMenuItem});
             this.тОЭToolStripMenuItem.Name = "тОЭToolStripMenuItem";
-            this.тОЭToolStripMenuItem.Size = new System.Drawing.Size(40, 17);
+            this.тОЭToolStripMenuItem.Size = new System.Drawing.Size(73, 38);
             this.тОЭToolStripMenuItem.Text = "ТОЭ";
             // 
             // раздел1ToolStripMenuItem
             // 
             this.раздел1ToolStripMenuItem.Name = "раздел1ToolStripMenuItem";
-            this.раздел1ToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.раздел1ToolStripMenuItem.Size = new System.Drawing.Size(227, 44);
             this.раздел1ToolStripMenuItem.Text = "Раздел 1";
             this.раздел1ToolStripMenuItem.Click += new System.EventHandler(this.раздел1ToolStripMenuItem_Click);
             // 
             // раздел2ToolStripMenuItem
             // 
             this.раздел2ToolStripMenuItem.Name = "раздел2ToolStripMenuItem";
-            this.раздел2ToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.раздел2ToolStripMenuItem.Size = new System.Drawing.Size(227, 44);
             this.раздел2ToolStripMenuItem.Text = "Раздел 2";
             this.раздел2ToolStripMenuItem.Click += new System.EventHandler(this.раздел2ToolStripMenuItem_Click);
             // 
             // раздел3ToolStripMenuItem
             // 
             this.раздел3ToolStripMenuItem.Name = "раздел3ToolStripMenuItem";
-            this.раздел3ToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.раздел3ToolStripMenuItem.Size = new System.Drawing.Size(227, 44);
             this.раздел3ToolStripMenuItem.Text = "Раздел 3";
             this.раздел3ToolStripMenuItem.Click += new System.EventHandler(this.раздел3ToolStripMenuItem_Click);
             // 
             // диагностикаToolStripMenuItem
             // 
             this.диагностикаToolStripMenuItem.Name = "диагностикаToolStripMenuItem";
-            this.диагностикаToolStripMenuItem.Size = new System.Drawing.Size(88, 17);
+            this.диагностикаToolStripMenuItem.Size = new System.Drawing.Size(155, 38);
             this.диагностикаToolStripMenuItem.Text = "Диагностика";
             this.диагностикаToolStripMenuItem.Click += new System.EventHandler(this.диагностикаToolStripMenuItem_Click);
             // 
             // экономикаToolStripMenuItem
             // 
             this.экономикаToolStripMenuItem.Name = "экономикаToolStripMenuItem";
-            this.экономикаToolStripMenuItem.Size = new System.Drawing.Size(80, 17);
-            this.экономикаToolStripMenuItem.Text = "Экономика";
+            this.экономикаToolStripMenuItem.Size = new System.Drawing.Size(219, 38);
+            this.экономикаToolStripMenuItem.Text = "Экономика диплом";
             this.экономикаToolStripMenuItem.Click += new System.EventHandler(this.экономикаToolStripMenuItem_Click);
             // 
             // contentPanel
@@ -125,7 +126,7 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(22F, 42F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(971, 554);

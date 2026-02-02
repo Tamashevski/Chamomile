@@ -42,15 +42,15 @@ namespace Chamomile
         private void calculation_Click(object sender, EventArgs e)
         {
             //ПРоверка
-            textBox2.Text = "27";
-            comboBox1.Text = "Битумоминеральное";
-            comboBox2.Text = "Большой город";
-            comboBox3.Text = "Холмистый";
-            comboBox4.Text = "Умеренный";
-            textBox3.Text = "105";
-            textBox4.Text = "69";
-            comboBox5.Text = "1,8-3,5";
-            comboBox6.Text = "Осень-зима";
+            //textBox2.Text = "27";
+            //comboBox1.Text = "Битумоминеральное";
+            //comboBox2.Text = "Большой город";
+            //comboBox3.Text = "Холмистый";
+            //comboBox4.Text = "Умеренный";
+            //textBox3.Text = "105";
+            //textBox4.Text = "69";
+            //comboBox5.Text = "1,8-3,5";
+            //comboBox6.Text = "Осень-зима";
 
             if (comboBox5.Text == "1,2-1,8")
             {
