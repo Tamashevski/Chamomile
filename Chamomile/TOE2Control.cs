@@ -16,7 +16,7 @@ namespace Chamomile
     public partial class TOE2Control : UserControl
     {
        
-        private readonly string TemplateFileName = @"L:\Chamomile\exampleR2.docx";
+        private readonly string TemplateFileName = @"L:\Chamomile\TOE2.docx";
 
         public TOE2Control()
         {
@@ -194,63 +194,134 @@ namespace Chamomile
 
             // рассчитываем сопротивления каждой ветви
             Complex[] zs = new Complex[6]; // комплексные значения cопротивлений
+            String[] z0s = new String[4];  // 5 + 5 + j5
+            String[] z1s = new String[4];  // 10 + j5
+            String[] z3s = new String[4];  // L C R1
             for (int i = 0; i < n; i++)
             {
                 switch (sums[i])
                 {
                     case 1:  //L
                         zs[i] = new Complex(0, valueXL);
+                        z0s[i] = "";
+                        z1s[i] = "j" + Math.Round(zs[i].Imaginary, 2);
+                        z3s[i] = "jXL";
                         break;
                     case 2:  //C
                         zs[i] = new Complex(0, -valueXC);
+                        z0s[i] = "";
+                        z1s[i] = "‒j" + Math.Round(-zs[i].Imaginary, 2);
+                        z3s[i] = "‒jXC";
                         break;
                     case 3:  //LC
                         zs[i] = new Complex(0, valueXL - valueXC);
+                        z0s[i] = "j" + valueXL + " ‒ j" + valueXC;
+                        if (valueXL > valueXC)
+                        {
+                            z1s[i] = "j" + Math.Round(zs[i].Imaginary, 2);
+                        }
+                        else
+                        {
+                            z1s[i] = "-j" + Math.Round(-zs[i].Imaginary, 2);
+                        }
+                        z3s[i] = "jXL ‒ jXC";
                         break;
                     case 4:  //R1 
                         zs[i] = new Complex(valueR1, 0);
+                        z0s[i] = "";
+                        z1s[i] = Convert.ToString(Math.Round(zs[i].Real, 2));
+                        z3s[i] = "R1";
                         break;
                     case 5:  //R1L 
                         zs[i] = new Complex(valueR1, valueXL);
+                        z0s[i] = "";
+                        z1s[i] = Math.Round(zs[i].Real, 2) + " + j" + Math.Round(zs[i].Imaginary, 2);
+                        z3s[i] = "R1 + jXL";
                         break;
                     case 6:  //R1C 
                         zs[i] = new Complex(valueR1, -valueXC);
+                        z0s[i] = "";
+                        z1s[i] = Math.Round(zs[i].Real, 2) + " ‒ j" + Math.Round(-zs[i].Imaginary, 2);
+                        z3s[i] = "R1 ‒ jXC";
                         break;
                     case 8:  //R2 
                         zs[i] = new Complex(valueR2, 0);
+                        z0s[i] = "";
+                        z1s[i] = Convert.ToString(Math.Round(zs[i].Real, 2));
+                        z3s[i] = "R2";
                         break;
                     case 9:  //R2L
                         zs[i] = new Complex(valueR2, valueXL);
+                        z0s[i] = "";
+                        z1s[i] = Math.Round(zs[i].Real, 2) + " + j" + Math.Round(zs[i].Imaginary, 2);
+                        z3s[i] = "R2 + jXL";
                         break;
                     case 10:  //R2C 
                         zs[i] = new Complex(valueR2, -valueXC);
+                        z0s[i] = "";
+                        z1s[i] = Math.Round(zs[i].Real, 2) + " ‒ j" + Math.Round(-zs[i].Imaginary, 2);
+                        z3s[i] = "R2 ‒ jXC";
                         break;
                     case 11:  //R2CL
                         zs[i] = new Complex(valueR2, valueXL - valueXC);
+                        z0s[i] = Math.Round(zs[i].Real, 2) + " + j" + Math.Round(valueXL, 2) + " ‒ j" + Math.Round(valueXC, 2);
+                        if (valueXL > valueXC)
+                        {
+                            z1s[i] = zs[i].Real + " + j" + zs[i].Imaginary;
+                        }
+                        else
+                        {
+                            z1s[i] = zs[i].Real + " ‒ j" + -zs[i].Imaginary;
+                        }
+                        z3s[i] = "R2 + jXL ‒ jXC";
                         break;
                     case 12:  //R1R2 
                         zs[i] = new Complex(valueR1 + valueR2, 0);
+                        z0s[i] = valueR1 + " + " + valueR2;
+                        z1s[i] = Convert.ToString(Math.Round(zs[i].Real, 2));
+                        z3s[i] = "R1 + R2";
                         break;
                     case 13:  //R1R2L
                         zs[i] = new Complex(valueR1 + valueR2, valueXL);
+                        z0s[i] = valueR1 + " + " + valueR2 + " + j" + zs[i].Imaginary;
+                        z1s[i] = Math.Round(zs[i].Real, 2) + " + j" + Math.Round(zs[i].Imaginary, 2);
+                        z3s[i] = "R1 + R2 + jXL";
                         break;
                     case 14:  //R1R2C
                         zs[i] = new Complex(valueR1 + valueR2, -valueXC);
+                        z0s[i] = valueR1 + " + " + valueR2 + " ‒ j" + -zs[i].Imaginary;
+                        z1s[i] = Math.Round(zs[i].Real, 2) + " ‒ j" + Math.Round(-zs[i].Imaginary, 2);
+                        z3s[i] = "R1 + R2 ‒ jXC";
                         break;
                     case 15:  //R3
                         zs[i] = new Complex(valueR3, 0);
+                        z0s[i] = "";
+                        z1s[i] = Convert.ToString(Math.Round(zs[i].Real, 2));
+                        z3s[i] = "R3";
                         break;
                     case 16:  //R3L
                         zs[i] = new Complex(valueR3, valueXL);
+                        z0s[i] = "";
+                        z1s[i] = Math.Round(zs[i].Real, 2) + " + j" + Math.Round(zs[i].Imaginary, 2);
+                        z3s[i] = "R3 + jXL";
                         break;
                     case 17:  //R3C
                         zs[i] = new Complex(valueR3, -valueXC);
+                        z0s[i] = "";
+                        z1s[i] = Math.Round(zs[i].Real, 2) + " ‒ j" + Math.Round(-zs[i].Imaginary, 2);
+                        z3s[i] = "R3 ‒ jXC";
                         break;
                     case 23:  //R2R3 
                         zs[i] = new Complex(valueR3 + valueR2, 0);
+                        z0s[i] = valueR2 + " + " + valueR3;
+                        z1s[i] = Convert.ToString(Math.Round(zs[i].Real, 2));
+                        z3s[i] = "R2 + R3";
                         break;
                     case 25:  //R2R3C 
                         zs[i] = new Complex(valueR2 + valueR3, -valueXC);
+                        z0s[i] = valueR2 + " + " + valueR3 + " ‒ j" + -zs[i].Imaginary;
+                        z1s[i] = Math.Round(zs[i].Real, 2) + " ‒ j" + Math.Round(-zs[i].Imaginary, 2);
+                        z3s[i] = "R2 + R3 ‒ jXC";
                         break;
                 }
             }
@@ -556,25 +627,505 @@ namespace Chamomile
                 progressBar1.Visible = true;
                 progressBar1.Value++;
                 var wordApp = new Word.Application();
-                wordApp.Visible = true;
+                wordApp.Visible = false;
+                
                 try
                 {
                     var wordDocument = wordApp.Documents.Open(TemplateFileName);
+                    
+                    ReplaceWordStub("{U}", U.Text, wordDocument);
+                    ReplaceWordStub("{R1}", R1.Text, wordDocument);
+                    ReplaceWordStub("{R2}", R2.Text, wordDocument);
+                    progressBar1.Value++;
+                    if (R3.Text != "")
+                        ReplaceWordStub("{R3}", R3.Text, wordDocument);
+                    else ReplaceWordStub("{R3}", "delete", wordDocument);
+                    progressBar1.Value++;
+                    ReplaceWordStub("{L}", L.Text, wordDocument);
+                    ReplaceWordStub("{C}", C.Text, wordDocument);
+                    ReplaceWordStub("{XL}", XL.Text, wordDocument);
+                    ReplaceWordStub("{XC}", XC.Text, wordDocument);
+                    progressBar1.Value++;
+                    // Z1-Z4
+                    ReplaceWordStub("{Z1e}", z3s[0], wordDocument);
+                    ReplaceWordStub("{Z2e}", z3s[1], wordDocument);
+                    ReplaceWordStub("{Z3e}", z3s[2], wordDocument);
+                    progressBar1.Value++;
+                    string[] Zer = new string[4];
+                    for (int i = 0; i < 4; i++)
+                    {
+                        if (z0s[i] == "")
+                            Zer[i] = z1s[i];
+                        else Zer[i] = z0s[i] + " = " + z1s[i];
+                    }
+                    ReplaceWordStub("{Z1er}", Zer[0], wordDocument);
+                    ReplaceWordStub("{Z2er}", Zer[1], wordDocument);
+                    ReplaceWordStub("{Z3er}", Zer[2], wordDocument);
+                    progressBar1.Value++;
+                    string[] ZX = new string[4];
+                    string[] ZY = new string[4];
+                    string[] ZU = new string[4];
+                    for (int i = 0; i < n; i++)
+                    {
+                        if (sums[i] == 5 ^ sums[i] == 9 ^ sums[i] == 13 ^ sums[i] == 16 ^ (sums[i] == 11 & valueXL > valueXC))
+                        {
+                            ZX[i] = Convert.ToString(Math.Round(zs[i].Real, 2));
+                            ZY[i] = Convert.ToString(Math.Round(zs[i].Imaginary, 2));
+                            ZU[i] = ZY[i];
+                        }
+                        else if (sums[i] == 6 ^ sums[i] == 10 ^ sums[i] == 14 ^ sums[i] == 17 ^ sums[i] == 25 ^ (sums[i] == 11 & valueXL < valueXC))
+                        {
+                            ZX[i] = Convert.ToString(Math.Round(zs[i].Real, 2));
+                            ZY[i] = "(‒" + Math.Round(-zs[i].Imaginary, 2) + ")";
+                            ZU[i] = "‒" + Math.Round(-zs[i].Imaginary, 2) + "";
+                        }
+                        else
+                        {
+                            ZX[i] = "delete";
+                            ZY[i] = "delete";
+                            ZU[i] = "delete";
+                        }
+                    }
+                    ReplaceWordStub("{Z1X}", ZX[0], wordDocument);
+                    ReplaceWordStub("{Z2X}", ZX[1], wordDocument);
+                    ReplaceWordStub("{Z3X}", ZX[2], wordDocument);
+                    progressBar1.Value++;
+                    ReplaceWordStub("{Z4X}", ZX[3], wordDocument);
+                    ReplaceWordStub("{Z1Y}", ZY[0], wordDocument);
+                    ReplaceWordStub("{Z2Y}", ZY[1], wordDocument);
+                    progressBar1.Value++;
+                    ReplaceWordStub("{Z3Y}", ZY[2], wordDocument);
+                    ReplaceWordStub("{Z4Y}", ZY[3], wordDocument);
+                    ReplaceWordStub("{Z1U}", ZU[0], wordDocument);
+                    ReplaceWordStub("{Z2U}", ZU[1], wordDocument);
+                    progressBar1.Value++;
+                    ReplaceWordStub("{Z3U}", ZU[2], wordDocument);
+                    ReplaceWordStub("{Z4U}", ZU[3], wordDocument);
 
-                    wordDocument.SaveAs(@"L:\Chamomile\result12.docx");
+                    ReplaceWordStub("{Z1}", Convert.ToString(Math.Round(zs[0].Magnitude, 2)), wordDocument);
+                    ReplaceWordStub("{Z2}", Convert.ToString(Math.Round(zs[1].Magnitude, 2)), wordDocument);
+                    ReplaceWordStub("{Z3}", Convert.ToString(Math.Round(zs[2].Magnitude, 2)), wordDocument);
+                    progressBar1.Value++;
+                    string[] Zangle = new string[4];
+                    for (int i = 0; i < 4; i++)
+                    {
+                        if (zs[i].Phase < 0)
+                            Zangle[i] = "‒j" + Math.Round((-zs[i].Phase * 180) / Math.PI);
+                        else Zangle[i] = "j" + Math.Round((zs[i].Phase * 180) / Math.PI);
+                    }
+                    ReplaceWordStub("{Z1angle}", Zangle[0], wordDocument);
+                    ReplaceWordStub("{Z2angle}", Zangle[1], wordDocument);
+                    ReplaceWordStub("{Z3angle}", Zangle[2], wordDocument);
+                    progressBar1.Value++;
+                    if (n == 3)
+                    {
+                        ReplaceWordStub("{Z4e}", "delete", wordDocument);
+                        ReplaceWordStub("{Z4er}", "delete", wordDocument);
+                        ReplaceWordStub("{Z4}", "delete", wordDocument);
+                        ReplaceWordStub("{Z4angle}", "delete", wordDocument);
+                    }
+                    else
+                    {
+                        ReplaceWordStub("{Z4e}", z3s[3], wordDocument);
+                        ReplaceWordStub("{Z4er}", Zer[3], wordDocument);
+                        ReplaceWordStub("{Z4}", Convert.ToString(Math.Round(zs[3].Magnitude, 2)), wordDocument);
+                        ReplaceWordStub("{Z4angle}", Zangle[3], wordDocument);
+                    }
+                    // Z1-Z4
+                    progressBar1.Value++;
+                    // Z23
+                    string Z23plus = "";
+                    if ((sums[2] == 2) ^ (sums[2] == 3 & valueXL < valueXC))
+                        Z23plus = z1s[1] + " " + z1s[2];
+                    else Z23plus = z1s[1] + " + " + z1s[2];
+                    ReplaceWordStub("{Z2+Z3}", Z23plus, wordDocument);
+                    progressBar1.Value++;
+                    Complex Z23pr = zs[1] * zs[2];
+                    ReplaceWordStub("{Z231}", Convert.ToString(Math.Round(Z23pr.Magnitude, 2)), wordDocument);
+
+                    string Z23a = "";
+                    if (Z23pr.Phase < 0)
+                        Z23a = "‒j" + Math.Round((-Z23pr.Phase * 180) / Math.PI);
+                    else Z23a = "j" + Math.Round((Z23pr.Phase * 180) / Math.PI);
+                    ReplaceWordStub("{Z23a}", Z23a, wordDocument);
+                    progressBar1.Value++;
+                    Complex Z23s = zs[1] + zs[2];
+                    string Z23ss = "";
+                    double Z23p = Math.Round((Z23s.Phase * 180) / Math.PI);
+                    if (Z23p == -90)
+                        Z23ss = "‒j" + Math.Round(-Z23s.Imaginary, 2);
+                    else if (Z23p == 90)
+                        Z23ss = "j" + Math.Round(Z23s.Imaginary, 2);
+                    else if (Z23p == 0)
+                        Z23ss = "" + Math.Round(Z23s.Real, 2);
+                    else if (Z23p < 0)
+                        Z23ss = Math.Round(Z23s.Real, 2) + " ‒ j" + Math.Round(-Z23s.Imaginary, 2);
+                    else if (Z23p > 0)
+                        Z23ss = Math.Round(Z23s.Real, 2) + " + j" + Math.Round(Z23s.Imaginary, 2);
+                    ReplaceWordStub("{Z23p}", Z23ss, wordDocument);
+
+                    ReplaceWordStub("{Z23pr}", Convert.ToString(Math.Round(Z23s.Magnitude, 2)), wordDocument);
+                    progressBar1.Value++;
+                    string Z23pra = "";
+                    if (Z23s.Phase < 0)
+                        Z23pra = "‒j" + Math.Round((-Z23s.Phase * 180) / Math.PI);
+                    else Z23pra = "j" + Math.Round((Z23s.Phase * 180) / Math.PI);
+                    ReplaceWordStub("{Z23pra}", Z23pra, wordDocument);
+
+                    ReplaceWordStub("{Z23}", Convert.ToString(Math.Round(zs[4].Magnitude, 2)), wordDocument);
+                    progressBar1.Value++;
+                    string Z23oa = "";
+                    if (zs[4].Phase < 0)
+                        Z23oa = "‒j" + Math.Round((-zs[4].Phase * 180) / Math.PI);
+                    else Z23oa = "j" + Math.Round((zs[4].Phase * 180) / Math.PI);
+                    ReplaceWordStub("{Z23oa}", Z23oa, wordDocument);
+
+                    string Z23I = "";
+                    double Z23q = Math.Round((zs[4].Phase * 180) / Math.PI);
+                    if (Z23q == -90)
+                        Z23I = "‒j" + Math.Round(-zs[4].Imaginary, 2);
+                    else if (Z23q == 90)
+                        Z23I = "j" + Math.Round(zs[4].Imaginary, 2);
+                    else if (Z23q == 0)
+                        Z23I = "" + Math.Round(zs[4].Real, 2);
+                    else if (Z23q < 0)
+                        Z23I = Math.Round(zs[4].Real, 2) + " ‒ j" + Math.Round(-zs[4].Imaginary, 2);
+                    else if (Z23q > 0)
+                        Z23I = Math.Round(zs[4].Real, 2) + " + j" + Math.Round(zs[4].Imaginary, 2);
+                    ReplaceWordStub("{Z23I}", Z23I, wordDocument);
+                    progressBar1.Value++;
+                    string Z23y = "";
+                    if (zs[4].Phase < 0)
+                        Z23y = "‒" + Math.Round((-zs[4].Phase * 180) / Math.PI);
+                    else Z23y = Math.Round((zs[4].Phase * 180) / Math.PI) + "";
+                    ReplaceWordStub("{Z23y}", Z23y, wordDocument);
+                    // Z23
+
+                    // Zобщ
+                    string Zo = "";
+                    if (n == 3)
+                        if (Z23q == -90)
+                            Zo = Zer[0] + " " + Z23I;
+                        else Zo = Zer[0] + " + " + Z23I;
+                    if (n == 4)
+                    {
+                        if (Z23q == -90 & (sums[3] == 2) || (sums[3] == 3 & valueXL < valueXC))
+                            Zo = Zer[0] + " " + Z23I + " " + Zer[3];
+                        else if (Z23q == -90 & !((sums[3] == 2) || (sums[3] == 3 & valueXL < valueXC)))
+                            Zo = Zer[0] + " " + Z23I + " + " + Zer[3];
+                        else if (Z23q != -90 & !(sums[3] != 2 & (sums[3] != 3 & valueXL < valueXC)))
+                            Zo = Zer[0] + " + " + Z23I + " + " + Zer[3];
+                        else if (Z23q != -90 & sums[3] != 2 & (sums[3] != 3 & valueXL < valueXC))
+                            Zo = Zer[0] + " + " + Z23I + " " + Zer[3];
+                    }
+                    ReplaceWordStub("{Zo}", Zo, wordDocument);
+                    progressBar1.Value++;
+                    string Zo1 = "";
+                    double Zo11 = Math.Round((zs[5].Phase * 180) / Math.PI);
+                    if (Zo11 == -90)
+                        Zo1 = "‒j" + Math.Round(-zs[5].Imaginary, 2);
+                    else if (Zo11 == 90)
+                        Zo1 = "j" + Math.Round(zs[5].Imaginary, 2);
+                    else if (Zo11 == 0)
+                        Zo1 = "" + Math.Round(zs[5].Real, 2);
+                    else if (Zo11 < 0)
+                        Zo1 = Math.Round(zs[5].Real, 2) + " ‒ j" + Math.Round(-zs[5].Imaginary, 2);
+                    else if (Zo11 > 0)
+                        Zo1 = Math.Round(zs[5].Real, 2) + " + j" + Math.Round(zs[5].Imaginary, 2);
+                    ReplaceWordStub("{Zo1}", Zo1, wordDocument);
+
+                    string Zo2 = "";
+                    if (zs[5].Real < 0)
+                        Zo2 = "(" + Math.Round(zs[5].Real, 2) + ")";
+                    else Zo2 = Convert.ToString(Math.Round(zs[5].Real, 2));
+                    ReplaceWordStub("{Zo2}", Zo2, wordDocument);
+                    progressBar1.Value++;
+                    string Zo3 = "";
+                    if (zs[5].Imaginary < 0)
+                        Zo3 = "(‒" + Math.Round(-zs[5].Imaginary, 2) + ")";
+                    else Zo3 = Convert.ToString(Math.Round(zs[5].Imaginary, 2));
+                    ReplaceWordStub("{Zo3}", Zo3, wordDocument);
+
+                    double Zo4 = Math.Round(zs[5].Real, 2);
+                    string Zo41 = "";
+                    if (Zo4 > 0)
+                        Zo41 = Convert.ToString(Zo4);
+                    else Zo41 = "‒" + -Zo4;
+                    ReplaceWordStub("{Zo4}", Convert.ToString(Zo4), wordDocument);
+
+                    double Zo5 = Math.Round(zs[5].Imaginary, 2);
+                    string Zo51 = "";
+                    if (Zo5 > 0)
+                        Zo51 = Convert.ToString(Zo5);
+                    else Zo51 = "‒" + -Zo5;
+                    ReplaceWordStub("{Zo5}", Zo51, wordDocument);
+                    progressBar1.Value++;
+                    ReplaceWordStub("{Zo6}", Convert.ToString(Math.Round(zs[5].Magnitude, 2)), wordDocument);
+
+                    string Zo7 = "";
+                    if (zs[5].Phase < 0)
+                        Zo7 = "‒j" + Math.Round((-zs[5].Phase * 180) / Math.PI);
+                    else Zo7 = "j" + Math.Round((zs[5].Phase * 180) / Math.PI);
+                    ReplaceWordStub("{Zo7}", Zo7, wordDocument);
+                    // Zобщ
+                    progressBar1.Value++;
+                    // Токи
+                    ReplaceWordStub("{I1}", Convert.ToString(Math.Round(I[0].Magnitude, 2)), wordDocument);
+
+                    string Iangle = "";
+                    if (I[0].Phase < 0)
+                        Iangle = "‒j" + Math.Round((-I[0].Phase * 180) / Math.PI);
+                    else Iangle = "j" + Math.Round((I[0].Phase * 180) / Math.PI);
+                    ReplaceWordStub("{angleI}", Iangle, wordDocument);
+                    progressBar1.Value++;
+                    ReplaceWordStub("{UAB}", Convert.ToString(Math.Round(UAB.Magnitude, 2)), wordDocument);
+
+                    string UABangle = "";
+                    if (UAB.Phase < 0)
+                        UABangle = "‒j" + Math.Round((-UAB.Phase * 180) / Math.PI);
+                    else UABangle = "j" + Math.Round((UAB.Phase * 180) / Math.PI);
+                    ReplaceWordStub("{UABangle}", UABangle, wordDocument);
+
+
+                    ReplaceWordStub("{I2}", Convert.ToString(Math.Round(I[1].Magnitude, 2)), wordDocument);
+
+                    string I2angle = "";
+                    if (I[1].Phase < 0)
+                        I2angle = "‒j" + Math.Round((-I[1].Phase * 180) / Math.PI);
+                    else I2angle = "j" + Math.Round((I[1].Phase * 180) / Math.PI);
+                    ReplaceWordStub("{angleI2}", I2angle, wordDocument);
+
+                    ReplaceWordStub("{I3}", Convert.ToString(Math.Round(I[2].Magnitude, 2)), wordDocument);
+
+                    string I3angle = "";
+                    if (I[2].Phase < 0)
+                        I3angle = "‒j" + Math.Round((-I[2].Phase * 180) / Math.PI);
+                    else I3angle = "j" + Math.Round((I[2].Phase * 180) / Math.PI);
+                    ReplaceWordStub("{angleI3}", I3angle, wordDocument);
+                    // Токи
+                    progressBar1.Value++;
+                    // Баланс
+                    string IIangle = "";
+                    if (I[0].Phase < 0)
+                        IIangle = "j" + Math.Round((-I[0].Phase * 180) / Math.PI);
+                    else IIangle = "‒j" + Math.Round((I[0].Phase * 180) / Math.PI);
+                    ReplaceWordStub("{IYangle}", IIangle, wordDocument);
+
+                    ReplaceWordStub("{Ss}", Convert.ToString(Math.Round(S.Magnitude, 2)), wordDocument);
+
+                    string SSangle = "";
+                    if (S.Phase < 0)
+                        SSangle = "‒j" + Math.Round((-S.Phase * 180) / Math.PI);
+                    else SSangle = "j" + Math.Round((S.Phase * 180) / Math.PI);
+                    ReplaceWordStub("{Ssangle}", SSangle, wordDocument);
+                    progressBar1.Value++;
+                    string Sangle = "";
+                    if (S.Phase < 0)
+                        Sangle = "‒" + Math.Round((-S.Phase * 180) / Math.PI);
+                    else Sangle = "" + Math.Round((S.Phase * 180) / Math.PI);
+                    ReplaceWordStub("{Sangle}", Sangle, wordDocument);
+
+                    string Ssp = "";
+                    double Sspq = Math.Round((S.Phase * 180) / Math.PI);
+                    if (Sspq == -90)
+                        Ssp = "‒j" + Math.Round(-S.Imaginary, 2);
+                    else if (Sspq == 90)
+                        Ssp = "j" + Math.Round(S.Imaginary, 2);
+                    else if (Sspq == 0)
+                        Ssp = "" + Math.Round(S.Real, 2);
+                    else if (Sspq < 0)
+                        Ssp = Math.Round(S.Real, 2) + " ‒ j" + Math.Round(-S.Imaginary, 2);
+                    else if (Sspq > 0)
+                        Ssp = Math.Round(S.Real, 2) + " + j" + Math.Round(S.Imaginary, 2);
+                    ReplaceWordStub("{Ssp}", Ssp, wordDocument);
+                    progressBar1.Value++;
+                    string Ps = "";
+                    if (S.Real < 0)
+                        Ps = "‒ " + Math.Round(-S.Real, 2);
+                    else Ps = Convert.ToString(Math.Round(S.Real, 2));
+                    ReplaceWordStub("{Ps}", Ps, wordDocument);
+
+                    string Qs = "";
+                    if (S.Imaginary < 0)
+                        Qs = "‒ " + Math.Round(-S.Imaginary, 2);
+                    else Qs = Convert.ToString(Math.Round(S.Imaginary, 2));
+                    ReplaceWordStub("{Qs}", Qs, wordDocument);
+
+                    ReplaceWordStub("{Sp}", Convert.ToString(Math.Round(Sp, 2)), wordDocument);
+                    progressBar1.Value++;
+                    ReplaceWordStub("{Pp}", Convert.ToString(Math.Round(P, 2)), wordDocument);
+
+                    string Qss = "";
+                    if (Q < 0)
+                        Qss = "‒ " + Math.Round(-Q, 2);
+                    else Qss = Convert.ToString(Math.Round(Q, 2));
+                    ReplaceWordStub("{Qp}", Qss, wordDocument);
+
+                    string Pp1 = "";
+                    if (P < 0)
+                        Pp1 = "(‒ " + Math.Round(-P, 2) + ")";
+                    else Pp1 = Convert.ToString(Math.Round(P, 2));
+                    ReplaceWordStub("{Pp1}", Pp1, wordDocument);
+                    progressBar1.Value++;
+                    string Qq1 = "";
+                    if (Q < 0)
+                        Qq1 = "(‒ " + Math.Round(-Q, 2) + ")";
+                    else Qq1 = Convert.ToString(Math.Round(Q, 2));
+                    ReplaceWordStub("{Qq1}", Qq1, wordDocument);
+
+                    string IXLS = Convert.ToString(IXL);
+                    string IXCS = Convert.ToString(IXC);
+                    string IR1S = Convert.ToString(IR1);
+                    string IR2S = Convert.ToString(IR2);
+                    string IR3S;
+                    if (R3.Text != "")
+                        IR3S = Convert.ToString(IR3);
+                    else IR3S = "none";
+
+                    ReplaceWordStub("{IXL}", IXLS, wordDocument);
+                    ReplaceWordStub("{IXC}", IXCS, wordDocument);
+                    ReplaceWordStub("{IR1}", IR1S, wordDocument);
+                    ReplaceWordStub("{IR2}", IR2S, wordDocument);
+                    ReplaceWordStub("{IR3}", IR3S, wordDocument);
+                    progressBar1.Value++;
+                    string IR1Z = "";
+                    string IR2Z = "";
+                    string IR3Z = "";
+                    string IXLZ = "";
+                    string IXCZ = "";
+                    if (IXLS == "1" ^ IXLS == "4")
+                        IXLZ = Convert.ToString(Math.Round(I[0].Magnitude, 2));
+                    else if (IXLS == "2")
+                        IXLZ = Convert.ToString(Math.Round(I[1].Magnitude, 2));
+                    else if (IXLS == "3")
+                        IXLZ = Convert.ToString(Math.Round(I[2].Magnitude, 2));
+
+                    if (IXCS == "1" ^ IXCS == "4")
+                        IXCZ = Convert.ToString(Math.Round(I[0].Magnitude, 2));
+                    else if (IXCS == "2")
+                        IXCZ = Convert.ToString(Math.Round(I[1].Magnitude, 2));
+                    else if (IXCS == "3")
+                        IXCZ = Convert.ToString(Math.Round(I[2].Magnitude, 2));
+
+                    if (IR1S == "1" ^ IR1S == "4")
+                        IR1Z = Convert.ToString(Math.Round(I[0].Magnitude, 2));
+                    else if (IR1S == "2")
+                        IR1Z = Convert.ToString(Math.Round(I[1].Magnitude, 2));
+                    else if (IR1S == "3")
+                        IR1Z = Convert.ToString(Math.Round(I[2].Magnitude, 2));
+
+                    if (IR2S == "1" ^ IR2S == "4")
+                        IR2Z = Convert.ToString(Math.Round(I[0].Magnitude, 2));
+                    else if (IR2S == "2")
+                        IR2Z = Convert.ToString(Math.Round(I[1].Magnitude, 2));
+                    else if (IR2S == "3")
+                        IR2Z = Convert.ToString(Math.Round(I[2].Magnitude, 2));
+
+                    if (R3.Text != "")
+                    {
+                        if (IR3S == "1" ^ IR3S == "4")
+                            IR3Z = Convert.ToString(Math.Round(I[0].Magnitude, 2));
+                        else if (IR3S == "2")
+                            IR3Z = Convert.ToString(Math.Round(I[1].Magnitude, 2));
+                        else if (IR3S == "3")
+                            IR3Z = Convert.ToString(Math.Round(I[2].Magnitude, 2));
+                    }
+                    else IR3Z = "none";
+
+                    ReplaceWordStub("{IXLZ}", IXLZ, wordDocument);
+                    ReplaceWordStub("{IXCZ}", IXCZ, wordDocument);
+                    ReplaceWordStub("{IR1Z}", IR1Z, wordDocument);
+                    ReplaceWordStub("{IR2Z}", IR2Z, wordDocument);
+                    ReplaceWordStub("{IR3Z}", IR3Z, wordDocument);
+                    // Баланс
+                    progressBar1.Value++;
+                    // Векторная
+                    ReplaceWordStub("{UXL}", Convert.ToString(Math.Round(UV[1], 2)), wordDocument);
+                    ReplaceWordStub("{UXC}", Convert.ToString(Math.Round(UV[2], 2)), wordDocument);
+                    ReplaceWordStub("{UR1}", Convert.ToString(Math.Round(UV[3], 2)), wordDocument);
+                    ReplaceWordStub("{UR2}", Convert.ToString(Math.Round(UV[4], 2)), wordDocument);
+                    if (R3.Text != "")
+                        ReplaceWordStub("{UR3}", Convert.ToString(Math.Round(UV[5], 2)), wordDocument);
+                    else ReplaceWordStub("{UR3}", "delete", wordDocument);
+                    progressBar1.Value++;
+                    ReplaceWordStub("{MI}", MI.Text, wordDocument);
+                    ReplaceWordStub("{MU}", MU.Text, wordDocument);
+                    ReplaceWordStub("{LI}", Convert.ToString(Math.Round(LUV[0], 2)), wordDocument);
+                    ReplaceWordStub("{LI2}", Convert.ToString(Math.Round(LUV[1], 2)), wordDocument);
+                    progressBar1.Value++;
+                    ReplaceWordStub("{LI3}", Convert.ToString(Math.Round(LUV[2], 2)), wordDocument);
+                    ReplaceWordStub("{LU}", Convert.ToString(Math.Round(LUV[3], 2)), wordDocument);
+                    ReplaceWordStub("{LUXL}", Convert.ToString(Math.Round(LUV[4], 2)), wordDocument);
+                    ReplaceWordStub("{LUXC}", Convert.ToString(Math.Round(LUV[5], 2)), wordDocument);
+                    ReplaceWordStub("{LUR1}", Convert.ToString(Math.Round(LUV[6], 2)), wordDocument);
+                    ReplaceWordStub("{LUR2}", Convert.ToString(Math.Round(LUV[7], 2)), wordDocument);
+                    if (R3.Text != "")
+                        ReplaceWordStub("{LUR3}", Convert.ToString(Math.Round(LUV[8], 2)), wordDocument);
+                    else ReplaceWordStub("{LUR3}", "delete", wordDocument);
+                    string Angle1 = "";
+                    if (I[0].Phase < 0)
+                        Angle1 = "‒" + Math.Round((-I[0].Phase * 180 / Math.PI));
+                    else Angle1 = Math.Round((I[0].Phase * 180 / Math.PI)) + "";
+                    ReplaceWordStub("{1angleI}", Angle1, wordDocument);
+
+                    string Angle2 = "";
+                    if (I[1].Phase < 0)
+                        Angle2 = "‒" + Math.Round((-I[1].Phase * 180 / Math.PI));
+                    else Angle2 = Math.Round((I[1].Phase * 180 / Math.PI)) + "";
+                    ReplaceWordStub("{1angleI2}", Angle2, wordDocument);
+                    string Angle3 = "";
+                    if (I[2].Phase < 0)
+                        Angle3 = "‒" + Math.Round((-I[2].Phase * 180 / Math.PI));
+                    else Angle3 = Math.Round((I[2].Phase * 180 / Math.PI)) + "";
+                    ReplaceWordStub("{1angleI3}", Angle3, wordDocument);
+
+                    string rez = "";
+                    if (R3.Text == "")
+                        rez = "два";
+                    else rez = "три";
+                    ReplaceWordStub("{rez}", rez, wordDocument);
+
+                    if (R3.Text != "")
+                        ReplaceWordStub("{dot}", ";", wordDocument);
+                    else ReplaceWordStub("{dot}", ".", wordDocument);
+
+                    if (n == 3)
+                        ReplaceWordStub("{dot1}", ".", wordDocument);
+                    else ReplaceWordStub("{dot1}", ";", wordDocument);
+
+                    // Векторная
+                    wordDocument.SaveAs(@"D:\Work\ТОЭ\2 Раздел\TOE2.docx");
                     wordApp.Visible = true;
+   
                 }
                 catch
                 {
                     MessageBox.Show("ErrorWord");
                 }
+                progressBar1.Visible = false;
+
+                string message;
+                if (n == 3 && R3.Text == "")
+                {
+                    message = "Удалить выделенное зеленым и бирюзовым";
+                }
+                else if (n == 4 && R3.Text != "")
+                {
+                    message = "Убрать выделение";
+                }
+                else if (n == 4)
+                {
+                    message = "Убрать выделенное бирюзовым";
+                }
+                else message = "Убрать выделенное зеленым";
+
+                MessageBox.Show(message, "Финальные правки", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             //Формировнаие отчета
-            progressBar1.Visible = false;
+            
         }
 
         
-
         private void ReplaceWordStub(string stubToReplace, string text, Word.Document wordDocument)
         {
             var range = wordDocument.Content;

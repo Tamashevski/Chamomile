@@ -1839,10 +1839,13 @@
             // 
             // progressBar1
             // 
+            this.progressBar1.ForeColor = System.Drawing.Color.LawnGreen;
             this.progressBar1.Location = new System.Drawing.Point(752, 929);
+            this.progressBar1.Maximum = 31;
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(753, 32);
             this.progressBar1.TabIndex = 184;
+            this.progressBar1.Value = 31;
             this.progressBar1.Visible = false;
             // 
             // TOE2Control
