@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using Word = Microsoft.Office.Interop.Word;
+using Visio = Microsoft.Office.Interop.Visio;
 using System.Numerics;
 
 namespace Chamomile
@@ -1102,8 +1103,7 @@ namespace Chamomile
                 {
                     MessageBox.Show("ErrorWord");
                 }
-                progressBar1.Visible = false;
-
+                
                 string message;
                 if (n == 3 && R3.Text == "")
                 {
@@ -1119,10 +1119,425 @@ namespace Chamomile
                 }
                 else message = "Убрать выделенное зеленым";
 
-                MessageBox.Show(message, "Финальные правки", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(message, "Финальные правки Word", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // Вывод в висио
+                    Visio.Application app = new Visio.Application();
+                    app.Visible = false;
+                    Visio.Document doc = app.Documents.Open(@"L:\Chamomile\Example.vsdm");
+
+                    try
+                    {
+                        Visio.Page visioPage = app.Application.ActivePage;
+                        /// Диаграмма
+
+                        // начальная координата(0,0)
+                        double X0 = 7.767715 - 12 / 2.54;
+                        double Y0 = 11.192912 - 16 / 2.54;
+                        // начальная координата(0,0)
+
+                        // расчет
+                        double valueX1 = X0 + (LUV[0] * Math.Cos(I[0].Phase)) / 2.54;// конец Iобщ
+                        double Y1 = Y0 + (LUV[0] * Math.Sin(I[0].Phase)) / 2.54;// конец Iобщ
+
+                        double valueX2 = X0 + (LUV[1] * Math.Cos(I[1].Phase)) / 2.54;// конец I2
+                        double Y2 = Y0 + (LUV[1] * Math.Sin(I[1].Phase)) / 2.54;// конец I2
+
+                        double valueX3 = X0 + (LUV[2] * Math.Cos(I[2].Phase)) / 2.54;// конец I3
+                        double Y3 = Y0 + (LUV[2] * Math.Sin(I[2].Phase)) / 2.54;// конец I3
+
+                        string[] vector = new string[12];
+                        vector[0] = X1.Text;    //I1
+                        vector[1] = X2.Text;    //I1
+                        vector[2] = X3.Text;    //I1
+                        vector[3] = X4.Text;    //I2
+                        vector[4] = X5.Text;    //I2
+                        vector[5] = X6.Text;    //I2
+                        vector[6] = X7.Text;    //I3
+                        vector[7] = X8.Text;    //I3
+                        vector[8] = X9.Text;    //I3
+                        vector[9] = X10.Text;   //I4
+                        vector[10] = X11.Text;  //I4
+                        vector[11] = X11.Text;  //I4
+
+
+                        int j = 0;
+
+                        double[] XS = new double[6];
+                        double[] YS = new double[6];
+                        double[] XE = new double[6];
+                        double[] YE = new double[6];
+                        string[] VU = new string[6];
+                        XS[0] = X0;
+                        YS[0] = Y0;
+
+                        // I1
+                        for (int i = 0; i < 3; i++)
+                        {
+                            switch (vector[i])
+                            {
+                                case "":
+                                    break;
+                                case "R1":
+                                    XE[j] = XS[j] + (LUV[6] * Math.Cos(I[0].Phase)) / 2.54;
+                                    YE[j] = YS[j] + (LUV[6] * Math.Sin(I[0].Phase)) / 2.54;
+                                    VU[j] = "UR1";
+                                    XS[j + 1] = XE[j];
+                                    YS[j + 1] = YE[j];
+                                    j++;
+                                    break;
+                                case "R2":
+                                    XE[j] = XS[j] + (LUV[7] * Math.Cos(I[0].Phase)) / 2.54;
+                                    YE[j] = YS[j] + (LUV[7] * Math.Sin(I[0].Phase)) / 2.54;
+                                    VU[j] = "UR2";
+                                    XS[j + 1] = XE[j];
+                                    YS[j + 1] = YE[j];
+                                    j++;
+                                    break;
+                                case "R3":
+                                    XE[j] = XS[j] + (LUV[8] * Math.Cos(I[0].Phase)) / 2.54;
+                                    YE[j] = YS[j] + (LUV[8] * Math.Sin(I[0].Phase)) / 2.54;
+                                    VU[j] = "UR3";
+                                    XS[j + 1] = XE[j];
+                                    YS[j + 1] = YE[j];
+                                    j++;
+                                    break;
+                                case "L":
+                                    XE[j] = XS[j] + (LUV[4] * Math.Cos(I[0].Phase + 90 * (Math.PI / 180))) / 2.54;
+                                    YE[j] = YS[j] + (LUV[4] * Math.Sin(I[0].Phase + 90 * (Math.PI / 180))) / 2.54;
+                                    VU[j] = "UXL";
+                                    XS[j + 1] = XE[j];
+                                    YS[j + 1] = YE[j];
+                                    j++;
+                                    break;
+                                case "C":
+                                    XE[j] = XS[j] + (LUV[5] * Math.Cos(I[0].Phase - 90 * (Math.PI / 180))) / 2.54;
+                                    YE[j] = YS[j] + (LUV[5] * Math.Sin(I[0].Phase - 90 * (Math.PI / 180))) / 2.54;
+                                    VU[j] = "UXC";
+                                    XS[j + 1] = XE[j];
+                                    YS[j + 1] = YE[j];
+                                    j++;
+                                    break;
+                            }
+
+                        }
+                        // I1
+                        double Xprom = XS[j];
+                        double Yprom = YS[j];
+                        // I2
+                        for (int i = 3; i < 6; i++)
+                        {
+                            switch (vector[i])
+                            {
+                                case "":
+                                    break;
+                                case "R1":
+                                    XE[j] = XS[j] + (LUV[6] * Math.Cos(I[1].Phase)) / 2.54;
+                                    YE[j] = YS[j] + (LUV[6] * Math.Sin(I[1].Phase)) / 2.54;
+                                    VU[j] = "UR1";
+                                    XS[j + 1] = XE[j];
+                                    YS[j + 1] = YE[j];
+                                    j++;
+                                    break;
+                                case "R2":
+                                    XE[j] = XS[j] + (LUV[7] * Math.Cos(I[1].Phase)) / 2.54;
+                                    YE[j] = YS[j] + (LUV[7] * Math.Sin(I[1].Phase)) / 2.54;
+                                    VU[j] = "UR2";
+                                    XS[j + 1] = XE[j];
+                                    YS[j + 1] = YE[j];
+                                    j++;
+                                    break;
+                                case "R3":
+                                    XE[j] = XS[j] + (LUV[8] * Math.Cos(I[1].Phase)) / 2.54;
+                                    YE[j] = YS[j] + (LUV[8] * Math.Sin(I[1].Phase)) / 2.54;
+                                    VU[j] = "UR3";
+                                    XS[j + 1] = XE[j];
+                                    YS[j + 1] = YE[j];
+                                    j++;
+                                    break;
+                                case "L":
+                                    XE[j] = XS[j] + (LUV[4] * Math.Cos(I[1].Phase + 90 * (Math.PI / 180))) / 2.54;
+                                    YE[j] = YS[j] + (LUV[4] * Math.Sin(I[1].Phase + 90 * (Math.PI / 180))) / 2.54;
+                                    VU[j] = "UXL";
+                                    XS[j + 1] = XE[j];
+                                    YS[j + 1] = YE[j];
+                                    j++;
+                                    break;
+                                case "C":
+                                    XE[j] = XS[j] + (LUV[5] * Math.Cos(I[1].Phase - 90 * (Math.PI / 180))) / 2.54;
+                                    YE[j] = YS[j] + (LUV[5] * Math.Sin(I[1].Phase - 90 * (Math.PI / 180))) / 2.54;
+                                    VU[j] = "UXC";
+                                    XS[j + 1] = XE[j];
+                                    YS[j + 1] = YE[j];
+                                    j++;
+                                    break;
+                            }
+
+                        }
+                        // I2
+                        XS[j] = Xprom;
+                        YS[j] = Yprom;
+
+                        // I3
+                        for (int i = 6; i < 9; i++)
+                        {
+                            switch (vector[i])
+                            {
+                                case "":
+                                    break;
+                                case "R1":
+                                    XE[j] = XS[j] + (LUV[6] * Math.Cos(I[2].Phase)) / 2.54;
+                                    YE[j] = YS[j] + (LUV[6] * Math.Sin(I[2].Phase)) / 2.54;
+                                    VU[j] = "UR1";
+                                    XS[j + 1] = XE[j];
+                                    YS[j + 1] = YE[j];
+                                    j++;
+                                    break;
+                                case "R2":
+                                    XE[j] = XS[j] + (LUV[7] * Math.Cos(I[2].Phase)) / 2.54;
+                                    YE[j] = YS[j] + (LUV[7] * Math.Sin(I[2].Phase)) / 2.54;
+                                    VU[j] = "UR2";
+                                    XS[j + 1] = XE[j];
+                                    YS[j + 1] = YE[j];
+                                    j++;
+                                    break;
+                                case "R3":
+                                    XE[j] = XS[j] + (LUV[8] * Math.Cos(I[2].Phase)) / 2.54;
+                                    YE[j] = YS[j] + (LUV[8] * Math.Sin(I[2].Phase)) / 2.54;
+                                    VU[j] = "UR3";
+                                    XS[j + 1] = XE[j];
+                                    YS[j + 1] = YE[j];
+                                    j++;
+                                    break;
+                                case "L":
+                                    XE[j] = XS[j] + (LUV[4] * Math.Cos(I[2].Phase + 90 * (Math.PI / 180))) / 2.54;
+                                    YE[j] = YS[j] + (LUV[4] * Math.Sin(I[2].Phase + 90 * (Math.PI / 180))) / 2.54;
+                                    VU[j] = "UXL";
+                                    XS[j + 1] = XE[j];
+                                    YS[j + 1] = YE[j];
+                                    j++;
+                                    break;
+                                case "C":
+                                    XE[j] = XS[j] + (LUV[5] * Math.Cos(I[2].Phase - 90 * (Math.PI / 180))) / 2.54;
+                                    YE[j] = YS[j] + (LUV[5] * Math.Sin(I[2].Phase - 90 * (Math.PI / 180))) / 2.54;
+                                    VU[j] = "UXC";
+                                    XS[j + 1] = XE[j];
+                                    YS[j + 1] = YE[j];
+                                    j++;
+                                    break;
+                            }
+
+                        }
+                        // I3
+
+                        // I4
+                        if (n == 4)
+                        {
+                            for (int i = 9; i < 12; i++)
+                            {
+                                switch (vector[i])
+                                {
+                                    case "":
+                                        break;
+                                    case "R1":
+                                        XE[j] = XS[j] + (LUV[6] * Math.Cos(I[0].Phase)) / 2.54;
+                                        YE[j] = YS[j] + (LUV[6] * Math.Sin(I[0].Phase)) / 2.54;
+                                        VU[j] = "UR1";
+                                        XS[j + 1] = XE[j];
+                                        YS[j + 1] = YE[j];
+                                        j++;
+                                        break;
+                                    case "R2":
+                                        XE[j] = XS[j] + (LUV[7] * Math.Cos(I[0].Phase)) / 2.54;
+                                        YE[j] = YS[j] + (LUV[7] * Math.Sin(I[0].Phase)) / 2.54;
+                                        VU[j] = "UR2";
+                                        XS[j + 1] = XE[j];
+                                        YS[j + 1] = YE[j];
+                                        j++;
+                                        break;
+                                    case "R3":
+                                        XE[j] = XS[j] + (LUV[8] * Math.Cos(I[0].Phase)) / 2.54;
+                                        YE[j] = YS[j] + (LUV[8] * Math.Sin(I[0].Phase)) / 2.54;
+                                        VU[j] = "UR3";
+                                        XS[j + 1] = XE[j];
+                                        YS[j + 1] = YE[j];
+                                        j++;
+                                        break;
+                                    case "L":
+                                        XE[j] = XS[j] + (LUV[4] * Math.Cos(I[0].Phase + 90 * (Math.PI / 180))) / 2.54;
+                                        YE[j] = YS[j] + (LUV[4] * Math.Sin(I[0].Phase + 90 * (Math.PI / 180))) / 2.54;
+                                        VU[j] = "UXL";
+                                        XS[j + 1] = XE[j];
+                                        YS[j + 1] = YE[j];
+                                        j++;
+                                        break;
+                                    case "C":
+                                        XE[j] = XS[j] + (LUV[5] * Math.Cos(I[0].Phase - 90 * (Math.PI / 180))) / 2.54;
+                                        YE[j] = YS[j] + (LUV[5] * Math.Sin(I[0].Phase - 90 * (Math.PI / 180))) / 2.54;
+                                        VU[j] = "UXC";
+                                        XS[j + 1] = XE[j];
+                                        YS[j + 1] = YE[j];
+                                        j++;
+                                        break;
+                                }
+
+                            }
+                        }
+                        // I4
+                        double Xmin = X0;
+                        double Xmax = X0;
+                        double Ymin = Y0;
+                        double Ymax = Y0;
+
+                        if (valueX1 < Xmin)
+                            Xmin = valueX1;
+                        if (valueX2 < Xmin)
+                            Xmin = valueX2;
+                        if (valueX3 < Xmin)
+                            Xmin = valueX3;
+                        if ((valueX3 - X0 + valueX2) < Xmin)
+                            Xmin = (valueX3 - X0 + valueX2);
+                        if ((X0 + LUV[3] / 2.54) < Xmin)
+                            Xmin = X0 + LUV[3] / 2.54;
+                        //
+                        if (valueX1 > Xmax)
+                            Xmax = valueX1;
+                        if (valueX2 > Xmax)
+                            Xmax = valueX2;
+                        if (valueX3 > Xmax)
+                            Xmax = valueX3;
+                        if ((valueX3 - X0 + valueX2) > Xmax)
+                            Xmax = (valueX3 - X0 + valueX2);
+                        if ((X0 + LUV[3] / 2.54) > Xmax)
+                            Xmax = X0 + LUV[3] / 2.54;
+                        //
+                        if (Y1 < Ymin)
+                            Ymin = Y1;
+                        if (Y2 < Ymin)
+                            Ymin = Y2;
+                        if (Y3 < Ymin)
+                            Ymin = Y3;
+                        if ((Y3 - Y0 + Y2) < Ymin)
+                            Ymin = (Y3 - Y0 + Y2);
+
+                        //
+                        if (Y1 > Ymax)
+                            Ymax = Y1;
+                        if (Y2 > Ymax)
+                            Ymax = Y2;
+                        if (Y3 > Ymax)
+                            Ymax = Y3;
+                        if ((Y3 - Y0 + Y2) > Ymax)
+                            Ymax = (Y3 - Y0 + Y2);
+
+
+                        int G = 4;
+                        if (R3.Text != "")
+                            G++;
+                        for (int i = 0; i < G; i++)
+                        {
+                            if (Xmin > XS[i])
+                                Xmin = XS[i];
+                            if (Xmin > XE[i])
+                                Xmin = XE[i];
+                            if (Xmax < XS[i])
+                                Xmax = XS[i];
+                            if (Xmax < XE[i])
+                                Xmax = XE[i];
+                            /////
+                            if (Ymin > YS[i])
+                                Ymin = YS[i];
+                            if (Ymin > YE[i])
+                                Ymin = YE[i];
+                            if (Ymax < YS[i])
+                                Ymax = YS[i];
+                            if (Ymax < YE[i])
+                                Ymax = YE[i];
+                        }
+                        double X00 = (Xmax + Xmin) / 2;
+                        double Y00 = (Ymax + Ymin) / 2;
+                        double Y01 = Y00 - 0.05;
+                        double Y02 = Y00 + 0.05;
+                        double X01 = X00 - (18.3333 / 2) / 2.54;
+                        double X02 = X00 + (18.3333 / 2) / 2.54;
+                        // расчет
+
+                        // вставка
+                        Visio.Shape LineII = visioPage.DrawLine(X01, Y01, X01, Y02);
+
+                        Visio.Shape LineIII = visioPage.DrawLine(X02, Y01, X02, Y02);
+
+
+                        Visio.Shape LineP1 = visioPage.DrawLine(Xmin - 1 / 2.54, Y0, Xmax + 1 / 2.54, Y0);
+                        LineP1.Text = "+1";
+
+                        Visio.Shape LineJ = visioPage.DrawLine(X0, Ymin - 1 / 2.54, X0, Ymax + 1 / 2.54);
+                        LineJ.Text = "j";
+
+                        Visio.Shape LineI1 = visioPage.DrawLine(X0, Y0, valueX1, Y1);
+                        LineI1.Text = "IОбщ,I1";
+
+
+                        Visio.Shape LineI2 = visioPage.DrawLine(X0, Y0, valueX2, Y2);
+                        LineI2.Text = "I2";
+
+                        Visio.Shape LineI3 = visioPage.DrawLine(X0, Y0, valueX3, Y3);
+                        LineI3.Text = "I3";
+
+                        Visio.Shape LineI22 = visioPage.DrawLine(valueX3, Y3, valueX3 - X0 + valueX2, Y3 - Y0 + Y2);
+                        LineI22.Text = "I2";
+
+                        Visio.Shape LineU = visioPage.DrawLine(X0, Y0, X0 + LUV[3] / 2.54, Y0);
+                        LineU.Text = "U";
+
+                        Visio.Shape LineU1 = visioPage.DrawLine(XS[0], YS[0], XE[0], YE[0]);
+                        LineU1.Text = VU[0];
+
+                        Visio.Shape LineU2 = visioPage.DrawLine(XS[1], YS[1], XE[1], YE[1]);
+                        LineU2.Text = VU[1];
+
+                        Visio.Shape LineU3 = visioPage.DrawLine(XS[2], YS[2], XE[2], YE[2]);
+                        LineU3.Text = VU[2];
+
+                        Visio.Shape LineU4 = visioPage.DrawLine(XS[3], YS[3], XE[3], YE[3]);
+                        LineU4.Text = VU[3];
+
+                        if (R3.Text != "")
+                        {
+                            Visio.Shape LineU5 = visioPage.DrawLine(XS[4], YS[4], XE[4], YE[4]);
+                            LineU5.Text = VU[4];
+                        }
+                        // вставка
+                        /// Диаграмма
+
+                        doc.SaveAs(@"L:\Chamomile\Result.vsdm");
+
+
+                    if (n == 3 && R3.Text == "")
+                    {
+                        message = "Запустите макрос R2I";
+                    }
+                    else if (n == 4 && R3.Text != "")
+                    {
+                        message = "Запустите макрос R2I4";
+                    }
+                    else if (n == 4)
+                    {
+                        message = "Запустите макрос R3I4";
+                    }
+                    else message = "Запустите макрос R3I";
+
+                    MessageBox.Show(message, "финальные правки Visio", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    progressBar1.Visible = false;
+                    }
+                    catch
+                    {
+                        MessageBox.Show("ErrorVisio");
+                    }
+                // Вывод в висио
             }
             //Формировнаие отчета
-            
         }
 
         

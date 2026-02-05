@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "L:\\Chamomile\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BC15B840-1034-4367-A3BE-9F82F3CBD950}|Chamomile\\Chamomile.csproj|l:\\chamomile\\chamomile\\toe2control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BC15B840-1034-4367-A3BE-9F82F3CBD950}|Chamomile\\Chamomile.csproj|L:\\Chamomile\\chamomile\\toe2control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BC15B840-1034-4367-A3BE-9F82F3CBD950}|Chamomile\\Chamomile.csproj|solutionrelative:chamomile\\toe2control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -34,7 +34,8 @@
               "RelativeToolTip": "Chamomile\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-07T16:36:36.072Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
             },
             {
               "$type": "Document",
@@ -57,7 +58,7 @@
               "RelativeDocumentMoniker": "Chamomile\\TOE2Control.cs",
               "ToolTip": "L:\\Chamomile\\Chamomile\\TOE2Control.cs",
               "RelativeToolTip": "Chamomile\\TOE2Control.cs",
-              "ViewState": "AgIAADoEAAAAAAAAAAAqwEYEAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAP4FAAAAAAAAAAAqwM8FAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-01T19:52:19.56Z",
               "IsPinned": true,
