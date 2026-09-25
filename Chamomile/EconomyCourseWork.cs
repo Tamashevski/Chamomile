@@ -1,12 +1,18 @@
-﻿using System;
+﻿using MathNet.Numerics.Distributions;
+using Microsoft.Office.Interop.Word;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using Word = Microsoft.Office.Interop.Word;
 
 namespace Chamomile
 {
@@ -83,6 +89,7 @@ namespace Chamomile
             textBox17.Text = "";
         }
 
+        private readonly string TemplateFileName = @"L:\Chamomile\Экономика курсовая\EconomicsCourseWorkTemplate.docx";
         private void button1_Click(object sender, EventArgs e)
         {
             //if (checkBox1.Checked == true)
@@ -224,7 +231,277 @@ namespace Chamomile
 
             textBox85.Text = (Math.Round(double.Parse(textBox81.Text) + double.Parse(textBox87.Text) + double.Parse(textBox86.Text), 2)).ToString();
 
+
+
+
+            if (checkBox3.Checked == true)
+            {
+
+                var wordApp = new Word.Application();
+                wordApp.Visible = true;
+                try
+                {
+                    var wordDocument = wordApp.Documents.Open(TemplateFileName);
+
+                    if (comboBox2.Text.Length > 0)
+                    {
+                        ReplaceWordStub("{name}", comboBox2.Text, wordDocument);
+                    }
+
+                    ReplaceWordStub("{theme}", textBox107.Text, wordDocument);
+                    ReplaceInHeadersFooters("{theme}", textBox107.Text, wordDocument);
+
+                    if (comboBox2.Text.Length > 0)
+                    {
+                        ReplaceWordStub("{group}", comboBox2.Text, wordDocument);
+                        ReplaceInHeadersFooters("{group}", comboBox2.Text, wordDocument);
+                        ReplaceInHeadersFooters("{group}", comboBox2.Text, wordDocument);
+                    }
+
+                    if (comboBox3.Text.Length > 0)
+                    {
+                        ReplaceWordStub("{option}", comboBox3.Text, wordDocument);
+                        ReplaceInHeadersFooters("{option}", comboBox3.Text, wordDocument);
+                        ReplaceInHeadersFooters("{option}", comboBox3.Text, wordDocument);
+                    }
+
+                    if (textBox105.Text.Length > 6)
+                    {
+                        string SNF = textBox105.Text.Substring(6) + " " + textBox105.Text.Substring(0, 6);
+                        ReplaceWordStub("{student}", SNF, wordDocument);
+                        ReplaceInHeadersFooters("{student1}", textBox105.Text, wordDocument);
+                    }
+
+                    if (comboBox1.Text.Length > 6)
+                    {
+                        string SNF = comboBox1.Text.Substring(6) + " " + comboBox1.Text.Substring(0, 6);
+                        ReplaceWordStub("{teacher}", SNF, wordDocument);
+                        ReplaceInHeadersFooters("{teacher1}", comboBox1.Text, wordDocument);
+                        ReplaceInHeadersFooters("{teacher1}", comboBox1.Text, wordDocument);
+                    }
+
+                    ReplaceWordStub("{Lc}", textBox5.Text, wordDocument);
+                    ReplaceWordStub("{D}", textBox104.Text, wordDocument);
+                    ReplaceWordStub("{L}", textBox58.Text, wordDocument);
+                    ReplaceWordStub("{Neo}", textBox103.Text, wordDocument);
+                    ReplaceWordStub("{teo}", textBox1.Text, wordDocument);
+                    ReplaceWordStub("{Teo1}", textBox57.Text, wordDocument);
+                    ReplaceWordStub("{Tto1}", textBox56.Text, wordDocument);
+                    ReplaceWordStub("{Tto2}", textBox55.Text, wordDocument);
+                    ReplaceWordStub("{Nto1}", textBox102.Text, wordDocument);
+                    ReplaceWordStub("{Nto2}", textBox101.Text, wordDocument);
+                    ReplaceWordStub("{tto1}", textBox3.Text, wordDocument);
+                    ReplaceWordStub("{tto2}", textBox2.Text, wordDocument);
+                    ReplaceWordStub("{Nso}", textBox100.Text, wordDocument);
+                    ReplaceWordStub("{tso}", textBox15.Text, wordDocument);
+                    ReplaceWordStub("{Tso1}", textBox54.Text, wordDocument);
+                    ReplaceWordStub("{Ttr1}", textBox53.Text, wordDocument);
+                    ReplaceWordStub("{ttr}", textBox16.Text, wordDocument);
+                    ReplaceWordStub("{L}", textBox58.Text, wordDocument);
+                    ReplaceWordStub("{Tob}", textBox52.Text, wordDocument);
+                    ReplaceWordStub("{Ppn}", textBox99.Text, wordDocument);
+                    ReplaceWordStub("{Tpn}", textBox51.Text, wordDocument);
+
+                    //2 Раздел
+
+                    ReplaceWordStub("{CHTSeo}", textBox98.Text, wordDocument);
+                    ReplaceWordStub("{CHTSto1}", textBox97.Text, wordDocument);
+                    ReplaceWordStub("{CHTSto2}", textBox96.Text, wordDocument);
+                    ReplaceWordStub("{CHTStr}", textBox95.Text, wordDocument);
+                    ReplaceWordStub("{ZPeo}", textBox50.Text, wordDocument);
+                    ReplaceWordStub("{ZPto1}", textBox49.Text, wordDocument);
+                    ReplaceWordStub("{ZPto2}", textBox48.Text, wordDocument);
+                    ReplaceWordStub("{ZPtr}", textBox47.Text, wordDocument);
+                    ReplaceWordStub("{ZPpovr}", textBox46.Text, wordDocument);
+                    ReplaceWordStub("{P}", textBox45.Text, wordDocument);
+                    ReplaceWordStub("{ZPosn}", textBox44.Text, wordDocument);
+                    ReplaceWordStub("{ZPodop}", textBox88.Text, wordDocument);
+                    ReplaceWordStub("{ZPg}", textBox43.Text, wordDocument);
+                    ReplaceWordStub("{Hosn}", textBox94.Text, wordDocument);
+                    ReplaceWordStub("{Osn}", textBox62.Text, wordDocument);
+                    ReplaceWordStub("{ZPrn}", textBox61.Text, wordDocument);
+                    ReplaceWordStub("{Prn}", textBox60.Text, wordDocument);
+                    ReplaceWordStub("{ZPosnr}", textBox59.Text, wordDocument);
+                    ReplaceWordStub("{ZPdopr}", textBox63.Text, wordDocument);
+                    ReplaceWordStub("{ZPgr}", textBox65.Text, wordDocument);
+                    ReplaceWordStub("{Osnr}", textBox64.Text, wordDocument);
+                    ReplaceWordStub("{Heo}", textBox93.Text, wordDocument);
+                    ReplaceWordStub("{Meo}", textBox67.Text, wordDocument);
+                    ReplaceWordStub("{Hto1}", textBox92.Text, wordDocument);
+                    ReplaceWordStub("{Mto1}", textBox66.Text, wordDocument);
+                    ReplaceWordStub("{Hto2}", textBox91.Text, wordDocument);
+                    ReplaceWordStub("{Mto2}", textBox68.Text, wordDocument);
+                    ReplaceWordStub("{Htr}", textBox90.Text, wordDocument);
+                    ReplaceWordStub("{Mtr}", textBox73.Text, wordDocument);
+                    ReplaceWordStub("{Zm}", textBox72.Text, wordDocument);
+                    ReplaceWordStub("{Hzch}", textBox89.Text, wordDocument);
+                    ReplaceWordStub("{Zzch}", textBox71.Text, wordDocument);
+                    ReplaceWordStub("{Zmr}", textBox70.Text, wordDocument);
+                    ReplaceWordStub("{Zzchr}", textBox69.Text, wordDocument);
+
+                    //3 Раздел
+
+                    ReplaceWordStub("{Peopr}", textBox6.Text, wordDocument);
+                    ReplaceWordStub("{Popr}", textBox77.Text, wordDocument);
+                    ReplaceWordStub("{Peohr}", textBox4.Text, wordDocument);
+                    ReplaceWordStub("{Pohr}", textBox76.Text, wordDocument);
+                    ReplaceWordStub("{Poprr}", textBox75.Text, wordDocument);
+                    ReplaceWordStub("{Pohrr}", textBox74.Text, wordDocument);
+
+                    //4 Раздел
+
+                    ReplaceWordStub("{Cpr}", textBox80.Text, wordDocument);
+                    ReplaceWordStub("{Hk}", textBox18.Text, wordDocument);
+                    ReplaceWordStub("{Pk}", textBox79.Text, wordDocument);
+                    ReplaceWordStub("{Cp}", textBox78.Text, wordDocument);
+
+                    //5 Раздел
+
+                    ReplaceWordStub("{Cprr}", textBox84.Text, wordDocument);
+                    ReplaceWordStub("{Pkp}", textBox83.Text, wordDocument);
+                    ReplaceWordStub("{Cpr3}", textBox82.Text, wordDocument);
+                    ReplaceWordStub("{Cpr1}", textBox81.Text, wordDocument);
+                    ReplaceWordStub("{R}", textBox17.Text, wordDocument);
+                    ReplaceWordStub("{P1}", textBox87.Text, wordDocument);
+                    ReplaceWordStub("{NDS}", textBox86.Text, wordDocument);
+                    ReplaceWordStub("{T}", textBox85.Text, wordDocument);
+
+                    double p11 = Math.Round(double.Parse(textBox72.Text) * 100/ double.Parse(textBox78.Text), 2);
+                    double p21 = Math.Round(double.Parse(textBox44.Text) * 100 / double.Parse(textBox78.Text), 2);
+                    double p31 = Math.Round(double.Parse(textBox77.Text) * 100 / double.Parse(textBox78.Text), 2);
+                    double p41 = Math.Round(double.Parse(textBox76.Text) * 100 / double.Parse(textBox78.Text), 2);
+                    ReplaceWordStub("{p11}", p11.ToString(), wordDocument);
+                    ReplaceWordStub("{p21}", p21.ToString(), wordDocument);
+                    ReplaceWordStub("{p31}", p31.ToString(), wordDocument);
+                    ReplaceWordStub("{p41}", p41.ToString(), wordDocument);
+
+
+                    wordApp.DisplayAlerts = Microsoft.Office.Interop.Word.WdAlertLevel.wdAlertsNone;
+                    string path;
+                    if (textBox105.Text.Length > 6)
+                    {
+                        path = @"L:\Chamomile\Экономика курсовая\EconomicsCourseWork" + textBox105.Text.Trim().Substring(6) + ".docx";
+                    }
+                    else
+                    {
+                        path = @"L:\Chamomile\Экономика курсовая\EconomicsCourseWork.docx";
+                    }
+
+                    if (File.Exists(path))
+                    {
+                        try
+                        {
+                            File.Delete(path);
+                        }
+                        catch 
+                        {
+                           
+                        }
+                    }    
+
+                    wordDocument.SaveAs(path);
+                    wordApp.Visible = true;
+                }
+                catch
+                {
+                    MessageBox.Show("ErrorWord");
+                }
+            }
         }
+
+        private void ReplaceWordStub(string stubToReplace, string text, Word.Document wordDocument)
+        {
+            var range = wordDocument.Content;
+            range.Find.ClearFormatting();
+            range.Find.Execute(FindText: stubToReplace, ReplaceWith: text, Replace: Word.WdReplace.wdReplaceAll);
+        }
+
+        private static void ReplaceInHeadersFooters(string stubToReplace, string text, Word.Document wordDocument)
+        {
+            object findText = stubToReplace;
+            object replaceWith = text;
+            object replace = 1; // WdReplace.wdReplaceOne (заменить только одно первое вхождение)
+            object forward = true;
+            object wrap = 1;    // WdFindWrap.wdFindContinue
+            object tm = Type.Missing;
+
+            // Проверяем только верхние колонтитулы (основной и первую страницу)
+            Word.WdHeaderFooterIndex[] hfIndices = {
+        Word.WdHeaderFooterIndex.wdHeaderFooterPrimary,
+        Word.WdHeaderFooterIndex.wdHeaderFooterFirstPage
+    };
+
+            foreach (Word.Section section in wordDocument.Sections)
+            {
+                foreach (var index in hfIndices)
+                {
+                    var header = section.Headers[index];
+                    if (header.Exists)
+                    {
+                        if (section.Index > 1 && header.LinkToPrevious)
+                            header.LinkToPrevious = false;
+
+                        // 1. Ищем и заменяем в тексте колонтитула. Если нашли — сразу выходим.
+                        if (header.Range.Find.Execute(ref findText, ref tm, ref tm, ref tm, ref tm, ref tm, ref forward, ref wrap, ref tm, ref replaceWith, ref replace, ref tm, ref tm, ref tm, ref tm))
+                        {
+                            return;
+                        }
+
+                        // 2. Ищем и заменяем в фигурах/штампе. Если нашли — сразу выходим.
+                        if (ProcessShapesOnce(header.Shapes, findText, replaceWith, replace, forward, wrap, tm))
+                        {
+                            return;
+                        }
+                    }
+                }
+            }
+        }
+
+        // Поиск по фигурам с мгновенным выходом после первой же успешной замены
+        private static bool ProcessShapesOnce(Word.Shapes shapes, object findText, object replaceWith, object replace, object forward, object wrap, object tm)
+        {
+            foreach (Word.Shape shape in shapes)
+            {
+                try
+                {
+                    if (shape.TextFrame.HasText != 0)
+                    {
+                        if (shape.TextFrame.TextRange.Find.Execute(
+                            ref findText, ref tm, ref tm, ref tm, ref tm, ref tm,
+                            ref forward, ref wrap, ref tm, ref replaceWith, ref replace,
+                            ref tm, ref tm, ref tm, ref tm))
+                        {
+                            return true;
+                        }
+                    }
+                }
+                catch { }
+
+                try
+                {
+                    dynamic dynShape = shape;
+                    if (dynShape.Type == 6) // msoGroup (группа фигур)
+                    {
+                        foreach (Word.Shape subShape in dynShape.GroupItems)
+                        {
+                            if (subShape.TextFrame.HasText != 0)
+                            {
+                                if (subShape.TextFrame.TextRange.Find.Execute(
+                                    ref findText, ref tm, ref tm, ref tm, ref tm, ref tm,
+                                    ref forward, ref wrap, ref tm, ref replaceWith, ref replace,
+                                    ref tm, ref tm, ref tm, ref tm))
+                                {
+                                    return true;
+                                }
+                            }
+                        }
+                    }
+                }
+                catch { }
+            }
+            return false;
+        }
+
 
     }
 }
