@@ -16,7 +16,7 @@ namespace Chamomile
     {
         
 
-        private readonly string TemplateFileName = @"L:\Chamomile\example.docx";
+        private readonly string TemplateFileName = @"L:\Chamomile\example1.docx";
 
         public EconomyControl()
         {
@@ -50,6 +50,20 @@ namespace Chamomile
 
         private void button1_Click(object sender, EventArgs e)
         {
+            try
+            {
+                string boof = textBox5.Text;
+                if (boof.Contains('.'))
+                {
+                    boof = boof.Replace('.', ',');
+                }
+                textBox5.Text = boof; 
+            }
+            catch
+            {
+                MessageBox.Show("Проверьте введенные данные", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             textBox6.Text = (Math.Round(double.Parse(textBox5.Text),2)).ToString();
             textBox8.Text = (Math.Round((double.Parse(textBox5.Text)+ double.Parse(textBox6.Text)), 2)).ToString();
             textBox7.Text = (Math.Round((double.Parse(textBox8.Text) * 0.34), 2)).ToString();

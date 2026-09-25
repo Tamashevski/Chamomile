@@ -38,6 +38,7 @@
             this.экономикаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contentPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.экономикаКурсачToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.contentPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -52,7 +53,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.тОЭToolStripMenuItem,
             this.диагностикаToolStripMenuItem,
-            this.экономикаToolStripMenuItem});
+            this.экономикаToolStripMenuItem,
+            this.экономикаКурсачToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(22, 7, 0, 7);
@@ -124,6 +126,13 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // экономикаКурсачToolStripMenuItem
+            // 
+            this.экономикаКурсачToolStripMenuItem.Name = "экономикаКурсачToolStripMenuItem";
+            this.экономикаКурсачToolStripMenuItem.Size = new System.Drawing.Size(211, 38);
+            this.экономикаКурсачToolStripMenuItem.Text = "Экономика курсач";
+            this.экономикаКурсачToolStripMenuItem.Click += new System.EventHandler(this.экономикаКурсачToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(22F, 42F);
@@ -136,8 +145,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Chamomile";
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
@@ -161,6 +168,7 @@
         private System.Windows.Forms.ToolStripMenuItem раздел2ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem раздел3ToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem экономикаКурсачToolStripMenuItem;
     }
 }
 

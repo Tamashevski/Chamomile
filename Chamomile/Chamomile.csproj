@@ -72,6 +72,12 @@
     <Compile Include="EconomyControl.Designer.cs">
       <DependentUpon>EconomyControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="EconomyCourseWork.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EconomyCourseWork.Designer.cs">
+      <DependentUpon>EconomyCourseWork.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EconomyControl.resx">
       <DependentUpon>EconomyControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EconomyCourseWork.resx">
+      <DependentUpon>EconomyCourseWork.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

@@ -59,5 +59,13 @@ namespace Chamomile
             EconomyControl.Dock = DockStyle.Fill;
             contentPanel.Controls.Add(EconomyControl);
         }
+
+        private void экономикаКурсачToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            contentPanel.Controls.Clear();
+            var EconomyCourseWork = new EconomyCourseWork();
+            EconomyCourseWork.Dock = DockStyle.Fill;
+            contentPanel.Controls.Add(EconomyCourseWork);
+        }
     }
 }

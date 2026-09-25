@@ -349,7 +349,12 @@
             "г",
             "кг",
             "мл",
-            "л"});
+            "л",
+            "баллон",
+            "комплект",
+            "туба",
+            "м",
+            "шт."});
             this.comboBox1.Location = new System.Drawing.Point(1107, 164);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(254, 33);
@@ -400,7 +405,12 @@
             "г",
             "кг",
             "мл",
-            "л"});
+            "л",
+            "баллон",
+            "комплект",
+            "туба",
+            "м",
+            "шт."});
             this.comboBox2.Location = new System.Drawing.Point(1107, 203);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(254, 33);
@@ -433,7 +443,12 @@
             "г",
             "кг",
             "мл",
-            "л"});
+            "л",
+            "баллон",
+            "комплект",
+            "туба",
+            "м",
+            "шт."});
             this.comboBox3.Location = new System.Drawing.Point(1107, 465);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(254, 33);
@@ -466,7 +481,12 @@
             "г",
             "кг",
             "мл",
-            "л"});
+            "л",
+            "баллон",
+            "комплект",
+            "туба",
+            "м",
+            "шт."});
             this.comboBox4.Location = new System.Drawing.Point(1107, 502);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(254, 33);

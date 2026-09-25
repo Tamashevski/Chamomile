@@ -85,7 +85,7 @@ namespace Chamomile
             {
                 roadSurface = 1;
             }
-            else if (comboBox1.Text == "Битумоминеральное")
+            else if (comboBox1.Text == "Битумоминеральная смесь")
             {
                 roadSurface = 2;
             }
@@ -147,7 +147,7 @@ namespace Chamomile
                 {
                     operatingCategory = 2;
                 }
-                else if (roadSurface == 2 && (terrain == 2 || terrain == 3) || (roadSurface == 3 && (terrain == 1 || terrain == 2 || terrain == 3)) || (roadSurface == 4 && (terrain == 1 || terrain == 2 || terrain == 3)))
+                else if ((roadSurface == 2 && (terrain == 2 || terrain == 3)) || (roadSurface == 3 && (terrain == 1 || terrain == 2 || terrain == 3)) || (roadSurface == 4 && (terrain == 1 || terrain == 2 || terrain == 3)))
                 {
                     operatingCategory = 3;
                 }
@@ -167,7 +167,7 @@ namespace Chamomile
                     operatingCategory = 4;
                 }
             }
-
+  
             switch (operatingCategory)
             {
                 case 1:
@@ -193,11 +193,11 @@ namespace Chamomile
             }
             else if (comboBox4.Text == "Жаркий сухой" || comboBox4.Text == "Очень жаркий сухой" || comboBox4.Text == "Умеренно холодный" || comboBox4.Text == "Холодный")
             {
-                textBox13.Text = "0.9";
+                textBox13.Text = "0,9";
             }
             else if (comboBox4.Text == "Очень холодный")
             {
-                textBox13.Text = "0.8";
+                textBox13.Text = "0,8";
             }
 
             double x = double.Parse(textBox4.Text) / double.Parse(textBox6.Text);
@@ -284,7 +284,6 @@ namespace Chamomile
             //Заполнение коэффициентов 
 
             //Расчеты
-
             textBox17.Text = (Math.Round(1000 * double.Parse(textBox6.Text) * double.Parse(textBox12.Text) * double.Parse(textBox11.Text) * double.Parse(textBox13.Text), 2)).ToString();
             textBox18.Text = (Math.Round(1000 * double.Parse(textBox50.Text) * double.Parse(textBox12.Text) * double.Parse(textBox13.Text), 2)).ToString();
             textBox19.Text = (Math.Round(1000 * double.Parse(textBox5.Text) * double.Parse(textBox12.Text) * double.Parse(textBox13.Text), 2)).ToString();
@@ -412,7 +411,7 @@ namespace Chamomile
                     ReplaceWordStub("{Tgtr}", textBox31.Text, wordDocument);
 
 
-                    wordDocument.SaveAs(@"L:\Chamomile\result.docx");
+                    wordDocument.SaveAs(@"L:\Chamomile\example1.docx");
                     wordApp.Visible = true;
                 }
                 catch

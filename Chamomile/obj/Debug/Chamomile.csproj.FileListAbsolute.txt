@@ -36,3 +36,4 @@ L:\Chamomile\Chamomile\bin\Debug\MathNet.Numerics.xml
 L:\Chamomile\Chamomile\bin\Debug\System.ValueTuple.xml
 L:\Chamomile\Chamomile\obj\Debug\Chamomile.csproj.Up2Date
 L:\Chamomile\Chamomile\obj\Debug\Chamomile.csproj.ResolveComReference.cache
+L:\Chamomile\Chamomile\obj\Debug\Chamomile.EconomyCourseWork.resources
